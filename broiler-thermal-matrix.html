@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0214)file:///G:/My%20Drive/%F0%9F%93%82TRANSMITABLE-REPOSITORY-COCCO-ETHEKWINI/Plot_For_Farming_Artifacts/LEP-IMP-ENG-2026_Bio-Solar_Engine/Broiler%20Stage%20Thermal%20Matrix%20_%20Lwandile%20Engineering%20Projects.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broiler Stage Thermal Matrix | Lwandile Engineering Projects</title>
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --panel-bg: #161b22;
+            --border-color: #30363d;
+            --accent-green: #238636;
+            --accent-blue: #58a6ff;
+            --accent-amber: #d29922;
+            --accent-red: #da3633;
+            --text-main: #c9d1d9;
+            --text-bright: #f0f6fc;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .sovereign-header {
+            text-align: center;
+            padding: 14px;
+            background: rgba(210, 153, 34, 0.1);
+            border: 1px solid var(--accent-amber);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: var(--accent-amber);
+            letter-spacing: 1.5px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .vision-drawer {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-amber);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .vision-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+
+        .vision-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vision-title h2 {
+            margin: 0;
+            color: var(--text-bright);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .vision-title p {
+            margin: 4px 0 0 0;
+            color: #8b949e;
+            font-size: 13px;
+        }
+
+        .audio-btn {
+            background: var(--accent-amber);
+            color: #000000;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vision-quote {
+            line-height: 1.7;
+            font-size: 15px;
+            color: var(--text-bright);
+        }
+
+        .scada-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .panel h3 {
+            margin-top: 0;
+            color: var(--text-bright);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .control-group {
+            margin-bottom: 18px;
+            background: var(--bg-dark);
+            padding: 14px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-bright);
+        }
+
+        .control-group input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent-amber);
+        }
+
+        .steward-teaching-box {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--accent-amber);
+            line-height: 1.5;
+            border-left: 3px solid var(--accent-amber);
+            padding: 8px 12px;
+            background: rgba(210, 153, 34, 0.05);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .telemetry-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin: 6px 0;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .status-optimal { background: rgba(35, 134, 54, 0.2); color: #3fb950; border: 1px solid var(--accent-green); }
+        .status-warning { background: rgba(210, 153, 34, 0.2); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+        .status-danger { background: rgba(218, 54, 51, 0.2); color: var(--accent-red); border: 1px solid var(--accent-red); }
+
+        .audit-terminal {
+            background: #040d12;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            color: #3fb950;
+            height: 130px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        .narrator-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--text-bright);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sovereign-header">
+        🏗️ LWANDILE ENGINEERING PROJECTS • SCAPUSH PRECISION
+    </div>
+
+    <div class="vision-drawer">
+        <div class="vision-header">
+            <div class="vision-title">
+                <span style="font-size: 28px;">🐥</span>
+                <div>
+                    <h2>Voice of Vision | Broiler Stage Thermal Matrix</h2>
+                    <p>Age-Adjusted Microclimate Setpoints &amp; Metabolic Cooling • Lwandile Engineering Projects</p>
+                </div>
+            </div>
+            <button onclick="toggleVisionAudio()" id="audio-btn" class="audio-btn" style="background: var(--accent-amber);"><span>▶</span> Listen to Directive</button>
+        </div>
+
+        <div class="vision-quote">
+            <p>
+                <strong style="color: var(--accent-amber);">Sovereign Avian Intent:</strong> 
+                "A day-one chick is a thermal consumer; a day-thirty-five bird is a heat generator. We engineer thermal transitions strictly by flock age in days, dropping temperatures gradually while ramping wind speed to ensure zero metabolic heat stress."
+            </p>
+        </div>
+
+        <div class="narrator-toggle">
+            <input type="checkbox" id="voice-activation-toggle" checked="">
+            <label for="voice-activation-toggle"><strong>Enable Voice Narrator on Every Activation &amp; Control Adjustment</strong></label>
+        </div>
+    </div>
+
+    <div class="scada-grid">
+        <div class="panel">
+            <h3>🎛️ Flock Age &amp; Ambient Controls</h3>
+            
+            <div class="control-group">
+                <label>Flock Age: <span id="age-val">14</span> Day(s) old</label>
+                <input type="range" id="age-input" min="1" max="35" value="1" oninput="handleAgeInput(this.value)">
+                
+                <!-- Enhanced Steward Teaching Box -->
+                <div class="steward-teaching-box" id="steward-age-teaching">📜 <strong>Steward's Teaching (Feathering Transition):</strong> Day 14. Feather development accelerates. Transition air exchange to remove moisture and ammonia while stepping setpoint down to 28.1°C.</div>
+            </div>
+
+            <div class="control-group">
+                <label>Measured Ambient Temp: <span id="amb-val">32</span> °C</label>
+                <input type="range" id="amb-input" min="15" max="40" value="32" oninput="handleAmbientInput(this.value)">
+                
+                <!-- Enhanced Steward Teaching Box -->
+                <div class="steward-teaching-box" id="steward-ambient-teaching">📜 <strong>Steward's Teaching:</strong> Moderate thermal differential (3.9°C). Staging fans to preserve optimal comfort zone.</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h3>⚙️ Target Setpoints &amp; Ventilation Mode</h3>
+            
+            <div>
+                <span style="font-size: 12px; color: #8b949e;">Calculated Age-Target Temp</span>
+                <div id="target-temp" class="telemetry-value" style="color: #3fb950;">28.1 °C</div>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <span style="font-size: 12px; color: #8b949e;">Required Air Speed &amp; Mode</span>
+                <div id="airspeed-status" class="telemetry-value" style="color: var(--accent-blue);">0.8 - 1.2 m/s (TRANSITION VENT)</div>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <span style="font-size: 12px; color: #8b949e;">Recommended Spectrum &amp; Lux</span>
+                <div id="lighting-status" class="telemetry-value" style="font-size: 18px; color: var(--accent-amber);">480nm BLUE (15 LUX)</div>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <span id="system-badge" class="status-badge status-warning">MODERATE DIFFERENTIAL • ADJUSTING FAN STAGES</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="audit-terminal" id="terminal-log">
+        [ENGINEERING CORE]: Lwandile Engineering Projects Core Fully Engaged.<br>
+        [STAGE MATRIX STARTUP]: Broiler Thermal Matrix Engine Online.<br>
+        [NARRATOR SYSTEM]: Voice Narrator on Every Activation initialized.<br>
+        [STEWARD TEACHINGS]: Dynamic Bio-Engine Guidance Active.
+    <br>[12:16:43 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 12. Target setpoint set to 28.8 degrees Celsius under Transition ventilation.<br>[12:16:46 AM]: [NARRATOR ACTIVATION]: Voice of Vision primary directive engaged.<br>[12:16:47 AM]: [NARRATOR]: Vision directive audio paused.<br>[12:16:53 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 22. Target setpoint set to 25.0 degrees Celsius under Tunnel cooling mode.<br>[12:16:58 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 25 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:17:03 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 33 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:17:06 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 15 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:17:08 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 34. Target setpoint set to 20.5 degrees Celsius under Tunnel cooling mode.<br>[12:17:10 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 18 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:17:11 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 24 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:17:13 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 27. Target setpoint set to 23.1 degrees Celsius under Tunnel cooling mode.<br>[12:17:27 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 24. Target setpoint set to 24.3 degrees Celsius under Tunnel cooling mode.<br>[12:17:30 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 21. Target setpoint set to 25.4 degrees Celsius under Tunnel cooling mode.<br>[12:17:31 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 14. Target setpoint set to 28.1 degrees Celsius under Transition ventilation.<br>[12:17:38 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 10. Target setpoint set to 29.6 degrees Celsius under Transition ventilation.<br>[12:17:40 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 4. Target setpoint set to 31.9 degrees Celsius under Minimum ventilation.<br>[12:17:42 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 7. Target setpoint set to 30.7 degrees Celsius under Minimum ventilation.<br>[12:18:18 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 28 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:18:21 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 31 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:18:27 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 13. Target setpoint set to 28.4 degrees Celsius under Transition ventilation.<br>[12:18:30 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 21. Target setpoint set to 25.4 degrees Celsius under Tunnel cooling mode.<br>[12:18:34 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 25 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:18:35 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 21 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:18:39 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 23 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:18:41 AM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 25 degrees Celsius. Re-evaluating wind chill matrix.<br>[12:18:44 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 25. Target setpoint set to 23.9 degrees Celsius under Tunnel cooling mode.<br>[12:18:46 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 31. Target setpoint set to 21.6 degrees Celsius under Tunnel cooling mode.<br>[12:18:51 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 34. Target setpoint set to 20.5 degrees Celsius under Tunnel cooling mode.<br>[12:18:57 AM]: [NARRATOR ACTIVATION]: Flock age updated to Day 29. Target setpoint set to 22.4 degrees Celsius under Tunnel cooling mode.<br>[10:49:55 PM]: [NARRATOR ACTIVATION]: Flock age updated to Day 5. Target setpoint set to 31.5 degrees Celsius under Minimum ventilation.<br>[10:50:06 PM]: [NARRATOR ACTIVATION]: Flock age updated to Day 18. Target setpoint set to 26.5 degrees Celsius under Tunnel cooling mode.<br>[10:50:17 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 21 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:50:27 PM]: [NARRATOR ACTIVATION]: Flock age updated to Day 27. Target setpoint set to 23.1 degrees Celsius under Tunnel cooling mode.<br>[10:50:33 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 20 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:50:40 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 16 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:50:48 PM]: [NARRATOR ACTIVATION]: Flock age updated to Day 34. Target setpoint set to 20.5 degrees Celsius under Tunnel cooling mode.<br>[10:50:51 PM]: [NARRATOR ACTIVATION]: Flock age updated to Day 14. Target setpoint set to 28.1 degrees Celsius under Transition ventilation.<br>[10:51:05 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 24 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:51:09 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 32 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:51:11 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 39 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:51:15 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 37 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:51:18 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 36 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:51:20 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 34 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:51:22 PM]: [NARRATOR ACTIVATION]: Ambient temperature adjusted to 32 degrees Celsius. Re-evaluating wind chill matrix.<br>[10:51:32 PM]: [NARRATOR ACTIVATION]: Voice of Vision primary directive engaged.</div>
+
+</div>
+
+<script>
+let isSpeakingDirective = false;
+let speechDebounceTimer = null;
+
+const visionText = `Voice of Vision, Broiler Stage Thermal Matrix by Lwandile Engineering Projects. A day-one chick is a thermal consumer; a day-thirty-five bird is a heat generator. We engineer thermal transitions strictly by flock age in days, dropping temperatures gradually while ramping wind speed to ensure zero metabolic heat stress. Proceed with absolute precision.`;
+
+function speakText(text) {
+    const isVoiceEnabled = document.getElementById('voice-activation-toggle').checked;
+    if (!isVoiceEnabled || !('speechSynthesis' in window)) return;
+
+    window.speechSynthesis.cancel(); // Stop ongoing speech
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 1.0;
+    utterance.pitch = 0.95;
+    window.speechSynthesis.speak(utterance);
+}
+
+function logTerminal(message) {
+    const log = document.getElementById('terminal-log');
+    const timestamp = new Date().toLocaleTimeString();
+    log.innerHTML += `<br>[${timestamp}]: ${message}`;
+    log.scrollTop = log.scrollHeight;
+}
+
+function handleAgeInput(val) {
+    updateSCADA();
+    
+    clearTimeout(speechDebounceTimer);
+    speechDebounceTimer = setTimeout(() => {
+        const target = (33 - ((val - 1) * 0.38)).toFixed(1);
+        let mode = "Minimum ventilation";
+        if (val > 14) mode = "Tunnel cooling mode";
+        else if (val > 7) mode = "Transition ventilation";
+
+        const text = `Flock age updated to Day ${val}. Target setpoint set to ${target} degrees Celsius under ${mode}.`;
+        speakText(text);
+        logTerminal(`[NARRATOR ACTIVATION]: ${text}`);
+    }, 350);
+}
+
+function handleAmbientInput(val) {
+    updateSCADA();
+    
+    clearTimeout(speechDebounceTimer);
+    speechDebounceTimer = setTimeout(() => {
+        const text = `Ambient temperature adjusted to ${val} degrees Celsius. Re-evaluating wind chill matrix.`;
+        speakText(text);
+        logTerminal(`[NARRATOR ACTIVATION]: ${text}`);
+    }, 350);
+}
+
+function toggleVisionAudio() {
+    const btn = document.getElementById('audio-btn');
+    if ('speechSynthesis' in window) {
+        if (isSpeakingDirective) {
+            window.speechSynthesis.cancel();
+            isSpeakingDirective = false;
+            btn.innerHTML = '<span>▶</span> Listen to Directive';
+            btn.style.background = 'var(--accent-amber)';
+            logTerminal('[NARRATOR]: Vision directive audio paused.');
+        } else {
+            const utterance = new SpeechSynthesisUtterance(visionText);
+            utterance.rate = 0.92;
+            utterance.pitch = 0.95;
+            
+            utterance.onend = function() {
+                isSpeakingDirective = false;
+                btn.innerHTML = '<span>▶</span> Listen to Directive';
+                btn.style.background = 'var(--accent-amber)';
+            };
+
+            window.speechSynthesis.speak(utterance);
+            isSpeakingDirective = true;
+            btn.innerHTML = '<span>⏹</span> Pause Directive';
+            btn.style.background = 'var(--accent-red)';
+            logTerminal('[NARRATOR ACTIVATION]: Voice of Vision primary directive engaged.');
+        }
+    }
+}
+
+function updateSCADA() {
+    const age = parseInt(document.getElementById('age-input').value);
+    const amb = parseInt(document.getElementById('amb-input').value);
+
+    document.getElementById('age-val').innerText = age;
+    document.getElementById('amb-val').innerText = amb;
+
+    const tTemp = document.getElementById('target-temp');
+    const air = document.getElementById('airspeed-status');
+    const light = document.getElementById('lighting-status');
+    const badge = document.getElementById('system-badge');
+    const stewardAge = document.getElementById('steward-age-teaching');
+    const stewardAmbient = document.getElementById('steward-ambient-teaching');
+
+    let target = 33 - ((age - 1) * 0.38);
+    target = Math.max(20, target).toFixed(1);
+
+    tTemp.innerText = target + " °C";
+
+    // Dynamic Steward's Teaching & Ventilation Modes
+    if (age <= 7) {
+        air.innerText = "< 0.15 m/s (MINIMUM VENT)";
+        light.innerText = "560nm GREEN/WARM (30 LUX)";
+        stewardAge.innerHTML = `📜 <strong>Steward's Teaching (Brooding Phase):</strong> Day ${age}. Chicks are thermal consumers lacking thermoregulation. Maintain target at ${target}°C without drafts to secure early organ and immunity development.`;
+    } else if (age <= 14) {
+        air.innerText = "0.8 - 1.2 m/s (TRANSITION VENT)";
+        light.innerText = "480nm BLUE (15 LUX)";
+        stewardAge.innerHTML = `📜 <strong>Steward's Teaching (Feathering Transition):</strong> Day ${age}. Feather development accelerates. Transition air exchange to remove moisture and ammonia while stepping setpoint down to ${target}°C.`;
+    } else {
+        air.innerText = "2.0 - 2.5 m/s (TUNNEL MODE)";
+        light.innerText = "480nm MONOCHROMATIC BLUE (5 LUX)";
+        stewardAge.innerHTML = `📜 <strong>Steward's Teaching (Metabolic Generator Phase):</strong> Day ${age}. Birds produce heavy internal metabolic heat. Rely on air speed and wind-chill cooling at ${target}°C setpoint.`;
+    }
+
+    // Dynamic Ambient Steward Teaching
+    const diff = amb - target;
+    if (diff > 5) {
+        badge.className = "status-badge status-danger";
+        badge.innerText = "HEAT STRESS ALERT: MAXIMUM TUNNEL COOLING ENGAGED";
+        stewardAmbient.innerHTML = `📜 <strong>Steward's Warning:</strong> Ambient temperature (${amb}°C) exceeds target by ${diff.toFixed(1)}°C. High risk of panting and heat prostration. Engage evaporative cooling pads and maximum tunnel air velocity immediately.`;
+    } else if (Math.abs(diff) <= 2) {
+        badge.className = "status-badge status-optimal";
+        badge.innerText = "STAGE MATRIX NOMINAL • THERMAL COMFORT";
+        stewardAmbient.innerHTML = `📜 <strong>Steward's Teaching:</strong> Thermal equilibrium achieved. Ambient is aligned with the age-specific metabolic target curve.`;
+    } else {
+        badge.className = "status-badge status-warning";
+        badge.innerText = "MODERATE DIFFERENTIAL • ADJUSTING FAN STAGES";
+        stewardAmbient.innerHTML = `📜 <strong>Steward's Teaching:</strong> Moderate thermal differential (${diff.toFixed(1)}°C). Staging fans to preserve optimal comfort zone.`;
+    }
+}
+
+updateSCADA();
+</script>
+
+ 
+</body></html>

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)file:///C:/Users/ASUS/Downloads/SCRP-collection/Cocco-Dispatch-Batch-01-(v1)-Master-Dispatch=Portal.html -->
+<html lang="en" class="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocco Dispatch Batch 01 (v1) - Master Dispatch Portal</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="./Cocco Dispatch Batch 01 (v1) - Master Dispatch Portal_files/saved_resource"></script>
+  <!-- Lucide Icons -->
+  <script src="./Cocco Dispatch Batch 01 (v1) - Master Dispatch Portal_files/lucide@latest"></script>
+  <!-- Chart.js CDN -->
+  <script src="./Cocco Dispatch Batch 01 (v1) - Master Dispatch Portal_files/chart.js.download"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gh: {
+              bg: '#0d1117',
+              panel: '#161b22',
+              border: '#30363d',
+              accent: '#58a6ff',
+              green: '#238636',
+              greenHover: '#2ea043',
+              amber: '#d29922',
+              purple: '#bc8cff',
+              italian: '#008c45',
+              italianRed: '#cd212a',
+              text: '#f0f6fc',
+              muted: '#8b949e',
+              header: '#010409'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d1117;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #30363d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8b949e;
+    }
+    :focus-visible {
+      outline: 3px solid #58a6ff !important;
+      outline-offset: 3px !important;
+    }
+    .narrator-highlight {
+      background-color: rgba(88, 166, 255, 0.2) !important;
+      border-left: 4px solid #58a6ff !important;
+      box-shadow: 0 0 12px rgba(88, 166, 255, 0.3);
+    }
+    .high-contrast-mode {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+    }
+    .high-contrast-mode .bg-gh-panel {
+      background-color: #0d0d0d !important;
+      border-color: #ffffff !important;
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-12{bottom:-3rem}.-right-12{right:-3rem}.top-0{top:0px}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.ml-auto{margin-left:auto}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-auto{margin-top:auto}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-64{height:16rem}.h-7{height:1.75rem}.h-72{height:18rem}.min-h-screen{min-height:100vh}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-7{width:1.75rem}.w-72{width:18rem}.w-full{width:100%}.min-w-\[90px\]{min-width:90px}.max-w-3xl{max-width:48rem}.max-w-7xl{max-width:80rem}.max-w-\[200px\]{max-width:200px}.flex-1{flex:1 1 0%}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gh-border > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(48 54 61 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gh-accent{--tw-border-opacity:1;border-color:rgb(88 166 255 / var(--tw-border-opacity, 1))}.border-gh-accent\/30{border-color:rgb(88 166 255 / 0.3)}.border-gh-border{--tw-border-opacity:1;border-color:rgb(48 54 61 / var(--tw-border-opacity, 1))}.border-gh-green\/50{border-color:rgb(35 134 54 / 0.5)}.bg-gh-bg{--tw-bg-opacity:1;background-color:rgb(13 17 23 / var(--tw-bg-opacity, 1))}.bg-gh-accent{--tw-bg-opacity:1;background-color:rgb(88 166 255 / var(--tw-bg-opacity, 1))}.bg-gh-accent\/10{background-color:rgb(88 166 255 / 0.1)}.bg-gh-green{--tw-bg-opacity:1;background-color:rgb(35 134 54 / var(--tw-bg-opacity, 1))}.bg-gh-green\/20{background-color:rgb(35 134 54 / 0.2)}.bg-gh-header{--tw-bg-opacity:1;background-color:rgb(1 4 9 / var(--tw-bg-opacity, 1))}.bg-gh-panel{--tw-bg-opacity:1;background-color:rgb(22 27 34 / var(--tw-bg-opacity, 1))}.bg-gh-italian{--tw-bg-opacity:1;background-color:rgb(0 140 69 / var(--tw-bg-opacity, 1))}.fill-current{fill:currentColor}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-gh-text{--tw-text-opacity:1;color:rgb(240 246 252 / var(--tw-text-opacity, 1))}.text-gh-accent{--tw-text-opacity:1;color:rgb(88 166 255 / var(--tw-text-opacity, 1))}.text-gh-amber{--tw-text-opacity:1;color:rgb(210 153 34 / var(--tw-text-opacity, 1))}.text-gh-bg{--tw-text-opacity:1;color:rgb(13 17 23 / var(--tw-text-opacity, 1))}.text-gh-green{--tw-text-opacity:1;color:rgb(35 134 54 / var(--tw-text-opacity, 1))}.text-gh-muted{--tw-text-opacity:1;color:rgb(139 148 158 / var(--tw-text-opacity, 1))}.text-gh-purple{--tw-text-opacity:1;color:rgb(188 140 255 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-5{opacity:0.05}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-gh-accent *::selection{--tw-bg-opacity:1;background-color:rgb(88 166 255 / var(--tw-bg-opacity, 1))}.selection\:text-gh-bg *::selection{--tw-text-opacity:1;color:rgb(13 17 23 / var(--tw-text-opacity, 1))}.selection\:bg-gh-accent::selection{--tw-bg-opacity:1;background-color:rgb(88 166 255 / var(--tw-bg-opacity, 1))}.selection\:text-gh-bg::selection{--tw-text-opacity:1;color:rgb(13 17 23 / var(--tw-text-opacity, 1))}.hover\:border-gh-accent:hover{--tw-border-opacity:1;border-color:rgb(88 166 255 / var(--tw-border-opacity, 1))}.hover\:bg-gh-border:hover{--tw-bg-opacity:1;background-color:rgb(48 54 61 / var(--tw-bg-opacity, 1))}.hover\:bg-gh-border\/60:hover{background-color:rgb(48 54 61 / 0.6)}.hover\:bg-gh-greenHover:hover{--tw-bg-opacity:1;background-color:rgb(46 160 67 / var(--tw-bg-opacity, 1))}.hover\:text-gh-accent:hover{--tw-text-opacity:1;color:rgb(88 166 255 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-gh-accent:focus{--tw-border-opacity:1;border-color:rgb(88 166 255 / var(--tw-border-opacity, 1))}.focus\:ring-4:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-gh-accent\/30:focus{--tw-ring-color:rgb(88 166 255 / 0.3)}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:ml-0{margin-left:0px}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:p-6{padding:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:w-auto{width:auto}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-start{justify-content:flex-start}}@media (min-width: 1280px){.xl\:flex-row{flex-direction:row}.xl\:items-center{align-items:center}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-12{bottom:-3rem}.-right-12{right:-3rem}.top-0{top:0px}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.ml-auto{margin-left:auto}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-auto{margin-top:auto}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-64{height:16rem}.h-7{height:1.75rem}.h-72{height:18rem}.min-h-screen{min-height:100vh}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-7{width:1.75rem}.w-72{width:18rem}.w-full{width:100%}.min-w-\[90px\]{min-width:90px}.max-w-3xl{max-width:48rem}.max-w-7xl{max-width:80rem}.max-w-\[200px\]{max-width:200px}.flex-1{flex:1 1 0%}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gh-border > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(48 54 61 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gh-accent{--tw-border-opacity:1;border-color:rgb(88 166 255 / var(--tw-border-opacity, 1))}.border-gh-accent\/30{border-color:rgb(88 166 255 / 0.3)}.border-gh-border{--tw-border-opacity:1;border-color:rgb(48 54 61 / var(--tw-border-opacity, 1))}.border-gh-green\/50{border-color:rgb(35 134 54 / 0.5)}.bg-gh-bg{--tw-bg-opacity:1;background-color:rgb(13 17 23 / var(--tw-bg-opacity, 1))}.bg-gh-accent\/10{background-color:rgb(88 166 255 / 0.1)}.bg-gh-green{--tw-bg-opacity:1;background-color:rgb(35 134 54 / var(--tw-bg-opacity, 1))}.bg-gh-green\/20{background-color:rgb(35 134 54 / 0.2)}.bg-gh-header{--tw-bg-opacity:1;background-color:rgb(1 4 9 / var(--tw-bg-opacity, 1))}.bg-gh-italian{--tw-bg-opacity:1;background-color:rgb(0 140 69 / var(--tw-bg-opacity, 1))}.bg-gh-panel{--tw-bg-opacity:1;background-color:rgb(22 27 34 / var(--tw-bg-opacity, 1))}.bg-gh-accent{--tw-bg-opacity:1;background-color:rgb(88 166 255 / var(--tw-bg-opacity, 1))}.fill-current{fill:currentColor}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-4{padding-bottom:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-sans{font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-gh-text{--tw-text-opacity:1;color:rgb(240 246 252 / var(--tw-text-opacity, 1))}.text-gh-accent{--tw-text-opacity:1;color:rgb(88 166 255 / var(--tw-text-opacity, 1))}.text-gh-amber{--tw-text-opacity:1;color:rgb(210 153 34 / var(--tw-text-opacity, 1))}.text-gh-green{--tw-text-opacity:1;color:rgb(35 134 54 / var(--tw-text-opacity, 1))}.text-gh-muted{--tw-text-opacity:1;color:rgb(139 148 158 / var(--tw-text-opacity, 1))}.text-gh-purple{--tw-text-opacity:1;color:rgb(188 140 255 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gh-bg{--tw-text-opacity:1;color:rgb(13 17 23 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-5{opacity:0.05}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-gh-accent *::selection{--tw-bg-opacity:1;background-color:rgb(88 166 255 / var(--tw-bg-opacity, 1))}.selection\:text-gh-bg *::selection{--tw-text-opacity:1;color:rgb(13 17 23 / var(--tw-text-opacity, 1))}.selection\:bg-gh-accent::selection{--tw-bg-opacity:1;background-color:rgb(88 166 255 / var(--tw-bg-opacity, 1))}.selection\:text-gh-bg::selection{--tw-text-opacity:1;color:rgb(13 17 23 / var(--tw-text-opacity, 1))}.hover\:border-gh-accent:hover{--tw-border-opacity:1;border-color:rgb(88 166 255 / var(--tw-border-opacity, 1))}.hover\:bg-gh-border:hover{--tw-bg-opacity:1;background-color:rgb(48 54 61 / var(--tw-bg-opacity, 1))}.hover\:bg-gh-border\/60:hover{background-color:rgb(48 54 61 / 0.6)}.hover\:bg-gh-greenHover:hover{--tw-bg-opacity:1;background-color:rgb(46 160 67 / var(--tw-bg-opacity, 1))}.hover\:text-gh-accent:hover{--tw-text-opacity:1;color:rgb(88 166 255 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-gh-accent:focus{--tw-border-opacity:1;border-color:rgb(88 166 255 / var(--tw-border-opacity, 1))}.focus\:ring-4:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-gh-accent\/30:focus{--tw-ring-color:rgb(88 166 255 / 0.3)}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:ml-0{margin-left:0px}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:p-6{padding:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:w-auto{width:auto}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-start{justify-content:flex-start}}@media (min-width: 1280px){.xl\:flex-row{flex-direction:row}.xl\:items-center{align-items:center}}</style></head>
+<body class="bg-gh-bg text-gh-text min-h-screen flex flex-col font-sans antialiased selection:bg-gh-accent selection:text-gh-bg high-contrast-mode">
+
+  <header class="sticky top-0 z-50 bg-gh-header border-b border-gh-border px-4 py-3 shadow-lg" role="banner">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
+      
+      <!-- Cocco Master Title Section -->
+      <div class="flex items-center space-x-3 w-full lg:w-auto justify-between lg:justify-start">
+        <div class="flex items-center space-x-3">
+          <div class="p-2.5 bg-gh-panel border border-gh-border rounded-xl text-gh-accent shadow-inner">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cpu" aria-hidden="true" class="lucide lucide-cpu w-7 h-7"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg>
+          </div>
+          <div>
+            <!-- Prominent Cocco Title Corrected -->
+            <h1 class="text-xl sm:text-2xl font-black text-white tracking-wide flex items-center gap-2">
+              Cocco Dispatch Batch 01 (v1)
+              <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-gh-green/20 text-gh-green border border-gh-green/50">Master Portal</span>
+            </h1>
+            <p class="text-xs text-gh-muted font-medium">Scapush Precision Master Dispatch Architecture &amp; Accessible Telemetry Hub</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Repo Links Header Controls -->
+      <div class="flex items-center gap-2 text-xs w-full lg:w-auto justify-end">
+        <a href="https://siphokhuzwayo12-a11y.github.io/cooco-dispath-batch-01.v1/" target="_blank" rel="noopener" class="px-3 py-1.5 bg-gh-panel hover:bg-gh-border border border-gh-border rounded-lg text-gh-text font-semibold flex items-center gap-1.5 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe" aria-hidden="true" class="lucide lucide-globe w-3.5 h-3.5 text-gh-accent"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          <span>Live Site</span>
+        </a>
+        <a href="https://github.com/siphokhuzwayo12-a11y/cooco-dispath-batch-01.v1/" target="_blank" rel="noopener" class="px-3 py-1.5 bg-gh-panel hover:bg-gh-border border border-gh-border rounded-lg text-gh-text font-semibold flex items-center gap-1.5 transition-colors">
+          <i data-lucide="github" class="w-3.5 h-3.5 text-gh-purple"></i>
+          <span>GitHub Code</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="bg-gh-panel border-b border-gh-border px-4 py-3 shadow-md" aria-label="Accessibility Dual Narrator Toolbar">
+    <div class="max-w-7xl mx-auto flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-4">
+      
+      <!-- Dual Voice Narrator Engine -->
+      <div class="flex flex-wrap items-center gap-2.5 bg-gh-bg p-2.5 rounded-xl border border-gh-border flex-1">
+        
+        <div class="flex items-center space-x-1.5 px-2.5 py-1 bg-gh-panel rounded-lg border border-gh-border text-xs text-gh-accent font-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg>
+          <span>Dual Narrator</span>
+        </div>
+
+        <!-- Language Selector Mode -->
+        <div class="flex items-center space-x-1 bg-gh-panel rounded-lg border border-gh-border p-1 text-xs font-semibold">
+          <button id="lang-en" onclick="setLanguage('en')" class="px-2 py-1 rounded text-gh-muted hover:text-white text-xs font-bold transition-all" aria-label="Set narrator language to English">
+            🇬🇧 EN
+          </button>
+          <button id="lang-it" onclick="setLanguage('it')" class="px-2 py-1 rounded bg-gh-italian text-white text-xs font-bold transition-all shadow" aria-label="Imposta la lingua del narratore su Italiano">
+            🇮🇹 IT Native
+          </button>
+        </div>
+
+        <!-- Voice Selector Dropdown -->
+        <label for="voice-select" class="sr-only">Select Narrator Voice</label>
+        <select id="voice-select" class="bg-gh-panel text-xs border border-gh-border rounded-lg px-2.5 py-1.5 focus:border-gh-accent text-gh-text max-w-[200px] truncate font-medium" aria-label="Select Voice Accent"><option value="Google italiano">Google italiano (it-IT)</option></select>
+
+        <!-- Speed / Rate Control -->
+        <div class="flex items-center space-x-1">
+          <label for="rate-select" class="text-[11px] text-gh-muted font-bold uppercase tracking-wider">Speed:</label>
+          <select id="rate-select" class="bg-gh-panel text-xs border border-gh-border rounded-lg px-2 py-1 focus:border-gh-accent text-gh-text" aria-label="Speech Speed Rate">
+            <option value="0.75">0.75x</option>
+            <option value="1" selected="">1.0x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+          </select>
+        </div>
+
+        <!-- Pitch Control -->
+        <div class="flex items-center space-x-1">
+          <label for="pitch-select" class="text-[11px] text-gh-muted font-bold uppercase tracking-wider">Pitch:</label>
+          <select id="pitch-select" class="bg-gh-panel text-xs border border-gh-border rounded-lg px-2 py-1 focus:border-gh-accent text-gh-text" aria-label="Speech Pitch">
+            <option value="0.8">Low</option>
+            <option value="1" selected="">Normal</option>
+            <option value="1.2">High</option>
+          </select>
+        </div>
+
+        <!-- Action Control Buttons -->
+        <div class="flex items-center space-x-1.5 ml-auto sm:ml-0">
+          <button id="btn-read-page" onclick="speakCurrentModule()" class="p-1.5 bg-gh-green hover:bg-gh-greenHover text-white rounded-lg transition-colors flex items-center space-x-1 text-xs font-bold px-3 shadow" title="Read Active Module Aloud" aria-label="Read active module text aloud">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="play" aria-hidden="true" class="lucide lucide-play w-3.5 h-3.5 fill-current"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+            <span>Read</span>
+          </button>
+
+          <button id="btn-pause-speech" onclick="pauseSpeech()" class="p-1.5 bg-gh-panel hover:bg-gh-border text-gh-text rounded-lg border border-gh-border transition-colors text-xs font-medium" title="Pause Speech" aria-label="Pause Speech">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="pause" aria-hidden="true" class="lucide lucide-pause w-3.5 h-3.5"><rect x="14" y="3" width="5" height="18" rx="1"></rect><rect x="5" y="3" width="5" height="18" rx="1"></rect></svg>
+          </button>
+
+          <button id="btn-stop-speech" onclick="stopSpeech()" class="p-1.5 bg-gh-panel hover:bg-gh-border text-red-400 rounded-lg border border-gh-border transition-colors text-xs font-medium" title="Stop Speech" aria-label="Stop Speech">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square w-3.5 h-3.5 fill-current"><rect width="18" height="18" x="3" y="3" rx="2"></rect></svg>
+          </button>
+        </div>
+
+        <!-- Live Narrator Status Badge -->
+        <div id="narrator-status" class="text-[11px] text-gh-accent font-mono px-2.5 py-1 rounded-md bg-gh-panel border border-gh-border min-w-[90px] text-center" aria-live="polite">Loaded: overview</div>
+
+      </div>
+
+      <!-- Quick Accessibility Toggles -->
+      <div class="flex items-center justify-end space-x-2 text-xs">
+        <button onclick="toggleHighContrast()" class="px-3 py-2 bg-gh-bg border border-gh-border hover:bg-gh-border text-gh-text rounded-lg transition-colors flex items-center space-x-1.5 font-bold" aria-label="Toggle High Contrast Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="eye" aria-hidden="true" class="lucide lucide-eye w-4 h-4 text-gh-purple"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span>High Contrast</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <nav class="bg-gh-panel border-b border-gh-border px-4 py-3 shadow-inner" aria-label="Cocco Dispatch Module Selection">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+      
+      <!-- Accessible Dropdown Module Switcher -->
+      <div class="flex items-center space-x-3 flex-1">
+        <label for="module-dropdown" class="text-xs font-extrabold text-white uppercase tracking-wider flex items-center gap-1.5 whitespace-nowrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layers" aria-hidden="true" class="lucide lucide-layers w-4 h-4 text-gh-accent"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg>
+          Select Module:
+        </label>
+        <select id="module-dropdown" onchange="switchModule(this.value)" class="w-full bg-gh-bg border-2 border-gh-accent text-white font-bold text-sm rounded-xl px-3.5 py-2.5 focus:ring-4 focus:ring-gh-accent/30 focus:border-gh-accent transition-all shadow-md" aria-label="Select Cocco Dispatch Artifact Module">
+          <option value="overview">📊 Master Index Hub (index.html Overview)</option>
+          <option value="auto_cover">⚙️ Broiler Dwarf Wall Auto Cover Mod</option>
+          <option value="simulator">🌡️ Broiler Microclimate Simulator</option>
+          <option value="thermal_feedstock">🌾 Broiler Stage Thermal &amp; Feedstock</option>
+          <option value="thermal_matrix">📋 Broiler Stage Thermal Matrix</option>
+          <option value="pvc_curtain">🪟 Dwarf Wall PVC Curtain Control</option>
+          <option value="minerals_srcp">⚡ Minerals Bio-Solar SRCP Marriage</option>
+          <option value="scapush_charter">📜 Scapush Charter v3.3</option>
+        </select>
+      </div>
+
+    </div>
+  </nav>
+
+  <main id="main-content" class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 space-y-6" role="main" tabindex="-1">
+
+    <!-- MODULE 0: OVERVIEW MASTER INDEX HUB -->
+    <section id="module-overview" class="module-panel space-y-6" aria-labelledby="overview-heading">
+      
+      <!-- Cocco Banner Hero -->
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 shadow-md relative overflow-hidden">
+        <div class="absolute -right-12 -bottom-12 opacity-5 text-gh-accent pointer-events-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" aria-hidden="true" class="lucide lucide-activity w-72 h-72"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
+        </div>
+        <div class="max-w-3xl space-y-3">
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-gh-accent/10 border border-gh-accent/30 text-gh-accent text-xs font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            <span>Cocco Dispatch Batch 01 (v1) Operational Hub</span>
+          </div>
+          <h2 id="overview-heading" class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+            Cocco Master Command &amp; Telemetry Center
+          </h2>
+          <p class="text-sm text-gh-text leading-relaxed font-normal">
+            Centralized microclimate control, bio-solar SRCP integration, dwarf-wall automated curtains, and brooding dispatch management. Use the dropdown above or select any artifact below to trigger the Dual-Language Speech Narrator.
+          </p>
+        </div>
+      </div>
+
+      <!-- Telemetry Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-gh-panel border border-gh-border rounded-xl p-4 space-y-2 hover:border-gh-accent transition-colors">
+          <div class="flex items-center justify-between text-gh-muted text-xs font-bold uppercase">
+            <span>Broiler Microclimate</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="thermometer" aria-hidden="true" class="lucide lucide-thermometer w-4 h-4 text-red-400"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path></svg>
+          </div>
+          <div class="text-2xl font-black text-white">32.4 °C</div>
+          <p class="text-xs text-gh-green font-medium flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle-2" aria-hidden="true" class="lucide lucide-check-circle-2 w-3.5 h-3.5"><circle cx="12" cy="12" r="10"></circle><path d="m16 9-5.5 5.5L8 12"></path></svg> Target Range Locked
+          </p>
+        </div>
+
+        <div class="bg-gh-panel border border-gh-border rounded-xl p-4 space-y-2 hover:border-gh-accent transition-colors">
+          <div class="flex items-center justify-between text-gh-muted text-xs font-bold uppercase">
+            <span>PVC Curtain State</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="wind" aria-hidden="true" class="lucide lucide-wind w-4 h-4 text-gh-purple"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"></path><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"></path><path d="M9.8 4.4A2 2 0 1 1 11 8H2"></path></svg>
+          </div>
+          <div class="text-2xl font-black text-white">40% Open</div>
+          <p class="text-xs text-gh-accent font-medium flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sliders" aria-hidden="true" class="lucide lucide-sliders w-3.5 h-3.5"><path d="M10 8h4"></path><path d="M12 21v-9"></path><path d="M12 8V3"></path><path d="M17 16h4"></path><path d="M19 12V3"></path><path d="M19 21v-5"></path><path d="M3 14h4"></path><path d="M5 10V3"></path><path d="M5 21v-7"></path></svg> Auto Differential Sync
+          </p>
+        </div>
+
+        <div class="bg-gh-panel border border-gh-border rounded-xl p-4 space-y-2 hover:border-gh-accent transition-colors">
+          <div class="flex items-center justify-between text-gh-muted text-xs font-bold uppercase">
+            <span>Bio-Solar Output</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap" aria-hidden="true" class="lucide lucide-zap w-4 h-4 text-gh-amber"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path></svg>
+          </div>
+          <div class="text-2xl font-black text-white">48.6 kW/h</div>
+          <p class="text-xs text-gh-amber font-medium flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sun" aria-hidden="true" class="lucide lucide-sun w-3.5 h-3.5"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> SRCP Peak Grid Feed
+          </p>
+        </div>
+
+        <div class="bg-gh-panel border border-gh-border rounded-xl p-4 space-y-2 hover:border-gh-accent transition-colors">
+          <div class="flex items-center justify-between text-gh-muted text-xs font-bold uppercase">
+            <span>Narrator Status</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4 text-gh-green"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg>
+          </div>
+          <div class="text-xl font-bold text-white">EN / IT Ready</div>
+          <p class="text-xs text-gh-green font-medium flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mic" aria-hidden="true" class="lucide lucide-mic w-3.5 h-3.5"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect x="9" y="2" width="6" height="13" rx="3"></rect></svg> Native Italian Voice Loaded
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Chart and Artifact Table Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Telemetry Graph -->
+        <div class="lg:col-span-2 bg-gh-panel border border-gh-border rounded-2xl p-5 space-y-4 shadow-sm">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="line-chart" aria-hidden="true" class="lucide lucide-line-chart w-4 h-4 text-gh-accent"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+              24-Hour Cocco Dispatch Microclimate Telemetry
+            </h3>
+            <span class="text-xs bg-gh-bg px-2.5 py-1 rounded border border-gh-border text-gh-muted font-mono">Live Sync</span>
+          </div>
+          <div class="h-64 relative">
+            <canvas id="overviewChart" width="964" height="320" style="display: block; box-sizing: border-box; height: 256px; width: 771.7px;"></canvas>
+          </div>
+        </div>
+
+        <!-- Direct Link Artifact Navigation Cards -->
+        <div class="bg-gh-panel border border-gh-border rounded-2xl p-5 space-y-4">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" aria-hidden="true" class="lucide lucide-file-text w-4 h-4 text-gh-amber"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+            All Cocco Dispatch Artifacts
+          </h3>
+          <div class="space-y-2 text-xs font-semibold">
+            <button onclick="switchModule('auto_cover')" class="w-full text-left p-2.5 bg-gh-bg hover:bg-gh-border/60 border border-gh-border rounded-xl transition-colors flex items-center justify-between group">
+              <span> Broiler Auto Cover Mod</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-gh-muted group-hover:text-white"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+            <button onclick="switchModule('simulator')" class="w-full text-left p-2.5 bg-gh-bg hover:bg-gh-border/60 border border-gh-border rounded-xl transition-colors flex items-center justify-between group">
+              <span> Broiler Microclimate Simulator</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-gh-muted group-hover:text-white"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+            <button onclick="switchModule('thermal_feedstock')" class="w-full text-left p-2.5 bg-gh-bg hover:bg-gh-border/60 border border-gh-border rounded-xl transition-colors flex items-center justify-between group">
+              <span> Broiler Thermal &amp; Feedstock</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-gh-muted group-hover:text-white"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+            <button onclick="switchModule('pvc_curtain')" class="w-full text-left p-2.5 bg-gh-bg hover:bg-gh-border/60 border border-gh-border rounded-xl transition-colors flex items-center justify-between group">
+              <span> Dwarf Wall PVC Curtain Control</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-gh-muted group-hover:text-white"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+            <button onclick="switchModule('minerals_srcp')" class="w-full text-left p-2.5 bg-gh-bg hover:bg-gh-border/60 border border-gh-border rounded-xl transition-colors flex items-center justify-between group">
+              <span> Minerals Bio-Solar SRCP Marriage</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-right" aria-hidden="true" class="lucide lucide-chevron-right w-4 h-4 text-gh-muted group-hover:text-white"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 1: BROILER AUTO COVER MOD -->
+    <section id="module-auto_cover" class="module-panel space-y-6 hidden">
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gh-border pb-4">
+          <div>
+            <span class="text-xs font-bold text-gh-accent uppercase tracking-wider">Cocco Dispatch Module</span>
+            <h2 class="text-xl font-black text-white mt-0.5">Broiler Dwarf Wall Auto Cover Mod</h2>
+            <p class="text-xs text-gh-muted mt-1">Automated mechanical enclosure for dwarf wall insulation and airflow management.</p>
+          </div>
+          <button onclick="speakSection('module-auto_cover')" class="px-3 py-2 bg-gh-green hover:bg-gh-greenHover text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg> Read Module Aloud
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="bg-gh-bg p-4 rounded-xl border border-gh-border space-y-2">
+            <h4 class="font-bold text-gh-accent text-sm flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cpu" aria-hidden="true" class="lucide lucide-cpu w-4 h-4"><path d="M12 20v2"></path><path d="M12 2v2"></path><path d="M17 20v2"></path><path d="M17 2v2"></path><path d="M2 12h2"></path><path d="M2 17h2"></path><path d="M2 7h2"></path><path d="M20 12h2"></path><path d="M20 17h2"></path><path d="M20 7h2"></path><path d="M7 20v2"></path><path d="M7 2v2"></path><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8" rx="1"></rect></svg> Mechanical Actuation
+            </h4>
+            <p class="text-gh-text leading-relaxed">
+              24V DC Linear Servo Drives coupled to thermal insulation panels on the 600mm masonry dwarf wall. Automatically seals during night brooding cycles to conserve heat.
+            </p>
+          </div>
+          <div class="bg-gh-bg p-4 rounded-xl border border-gh-border space-y-2">
+            <h4 class="font-bold text-gh-green text-sm flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true" class="lucide lucide-shield-check w-4 h-4"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg> Safety Overrides
+            </h4>
+            <p class="text-gh-text leading-relaxed">
+              Equipped with physical counter-weight fail-safe drop. If primary power drops below 18.5V, auto-cover opens to 25% minimum safety airflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 2: BROILER MICROCLIMATE SIMULATOR -->
+    <section id="module-simulator" class="module-panel hidden space-y-6">
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gh-border pb-4">
+          <div>
+            <span class="text-xs font-bold text-gh-amber uppercase tracking-wider">Cocco Dispatch Module</span>
+            <h2 class="text-xl font-black text-white mt-0.5">Broiler Microclimate Simulator</h2>
+            <p class="text-xs text-gh-muted mt-1">Real-time simulator model for temperature, humidity, and heat index calculations.</p>
+          </div>
+          <button onclick="speakSection('module-simulator')" class="px-3 py-2 bg-gh-green hover:bg-gh-greenHover text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg> Read Module Aloud
+          </button>
+        </div>
+
+        <div class="p-4 bg-gh-bg border border-gh-border rounded-xl space-y-3 text-xs">
+          <h4 class="font-bold text-white text-sm">Simulation Parameters:</h4>
+          <ul class="list-disc list-inside space-y-1.5 text-gh-text">
+            <li><strong>Target Brooding Temp (Day 1):</strong> 33.5 °C (Tolerance +/- 0.5°C)</li>
+            <li><strong>Target Relative Humidity:</strong> 65% RH</li>
+            <li><strong>CFM Air Exchange Rate:</strong> 1,250 CFM at 10 Pa Static Pressure</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 3: BROILER STAGE THERMAL & FEEDSTOCK -->
+    <section id="module-thermal_feedstock" class="module-panel space-y-6 hidden">
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gh-border pb-4">
+          <div>
+            <span class="text-xs font-bold text-red-400 uppercase tracking-wider">Cocco Dispatch Module</span>
+            <h2 class="text-xl font-black text-white mt-0.5">Broiler Stage Thermal &amp; Feedstock</h2>
+            <p class="text-xs text-gh-muted mt-1">Stage-by-stage thermal distribution and auger feed rate synchronizer.</p>
+          </div>
+          <button onclick="speakSection('module-thermal_feedstock')" class="px-3 py-2 bg-gh-green hover:bg-gh-greenHover text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg> Read Module Aloud
+          </button>
+        </div>
+
+        <div class="p-4 bg-gh-bg border border-gh-border rounded-xl space-y-2 text-xs">
+          <p class="text-gh-text leading-relaxed">
+            Synchronizes automated feed delivery lines with environmental floor heating ramps. Ensures feed palatability and prevents chick huddling near heat brooders.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 4: BROILER STAGE THERMAL MATRIX -->
+    <section id="module-thermal_matrix" class="module-panel hidden space-y-6">
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gh-border pb-4">
+          <div>
+            <span class="text-xs font-bold text-gh-purple uppercase tracking-wider">Cocco Dispatch Module</span>
+            <h2 class="text-xl font-black text-white mt-0.5">Broiler Stage Thermal Matrix</h2>
+            <p class="text-xs text-gh-muted mt-1">Master matrix map detailing multi-zone thermal thresholds.</p>
+          </div>
+          <button onclick="speakSection('module-thermal_matrix')" class="px-3 py-2 bg-gh-green hover:bg-gh-greenHover text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg> Read Module Aloud
+          </button>
+        </div>
+
+        <div class="overflow-x-auto border border-gh-border rounded-xl">
+          <table class="w-full text-xs text-left text-gh-text">
+            <thead class="bg-gh-bg text-gh-muted uppercase font-mono border-b border-gh-border">
+              <tr>
+                <th class="p-3">Growth Phase</th>
+                <th class="p-3">Target Temp</th>
+                <th class="p-3">Humidity Target</th>
+                <th class="p-3">Thermal Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gh-border">
+              <tr>
+                <td class="p-3 font-bold text-white">Starter (Day 0-7)</td>
+                <td class="p-3 text-red-400">33.0 °C</td>
+                <td class="p-3">60-70%</td>
+                <td class="p-3 text-gh-green font-bold">OPTIMAL</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-bold text-white">Grower (Day 8-21)</td>
+                <td class="p-3 text-gh-amber">28.0 °C</td>
+                <td class="p-3">55-65%</td>
+                <td class="p-3 text-gh-accent font-bold">LOCKED</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 5: DWARF WALL PVC CURTAIN CONTROL -->
+    <section id="module-pvc_curtain" class="module-panel space-y-6 hidden">
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gh-border pb-4">
+          <div>
+            <span class="text-xs font-bold text-gh-accent uppercase tracking-wider">Cocco Dispatch Module</span>
+            <h2 class="text-xl font-black text-white mt-0.5">Dwarf Wall PVC Curtain Control</h2>
+            <p class="text-xs text-gh-muted mt-1">Dual-winch PVC side curtain positioning and wind override rules.</p>
+          </div>
+          <button onclick="speakSection('module-pvc_curtain')" class="px-3 py-2 bg-gh-green hover:bg-gh-greenHover text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg> Read Module Aloud
+          </button>
+        </div>
+
+        <div class="p-4 bg-gh-bg border border-gh-border rounded-xl space-y-2 text-xs">
+          <p class="text-gh-text leading-relaxed">
+            Automated winching system adjusts PVC curtains based on wind velocity and internal humidity. Prevents direct cold air drops onto brooding zone floor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 6: MINERALS BIO-SOLAR SRCP MARRIAGE -->
+    <section id="module-minerals_srcp" class="module-panel space-y-6 hidden">
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gh-border pb-4">
+          <div>
+            <span class="text-xs font-bold text-gh-green uppercase tracking-wider">Cocco Dispatch Module</span>
+            <h2 class="text-xl font-black text-white mt-0.5">Minerals Bio-Solar SRCP Marriage</h2>
+            <p class="text-xs text-gh-muted mt-1">Bio-Solar coupling with Soil Rejuvenation Carbon Pools (SRCP) and mineral dusts.</p>
+          </div>
+          <button onclick="speakSection('module-minerals_srcp')" class="px-3 py-2 bg-gh-green hover:bg-gh-greenHover text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg> Read Module Aloud
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+          <div class="bg-gh-bg p-4 rounded-xl border border-gh-border space-y-2">
+            <h4 class="font-bold text-gh-amber text-sm">Solar Thermal Grid</h4>
+            <p class="text-gh-text">Stores surplus daytime energy in sub-floor thermal fluid loops.</p>
+          </div>
+          <div class="bg-gh-bg p-4 rounded-xl border border-gh-border space-y-2">
+            <h4 class="font-bold text-gh-green text-sm">SRCP Biochar Bed</h4>
+            <p class="text-gh-text">Locks in organic nitrogen and eliminates ammonia emissions.</p>
+          </div>
+          <div class="bg-gh-bg p-4 rounded-xl border border-gh-border space-y-2">
+            <h4 class="font-bold text-gh-accent text-sm">Mineral Micro-Nutrients</h4>
+            <p class="text-gh-text">Enriches soil chemistry through basalt rock dust integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 7: SCAPUSH CHARTER V3.3 -->
+    <section id="module-scapush_charter" class="module-panel space-y-6 hidden">
+      <div class="bg-gh-panel border border-gh-border rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gh-border pb-4">
+          <div>
+            <span class="text-xs font-bold text-gh-purple uppercase tracking-wider">Cocco Dispatch Module</span>
+            <h2 class="text-xl font-black text-white mt-0.5">Scapush Charter v3.3</h2>
+            <p class="text-xs text-gh-muted mt-1">Master operational charter and quality assurance mandates.</p>
+          </div>
+          <button onclick="speakSection('module-scapush_charter')" class="px-3 py-2 bg-gh-green hover:bg-gh-greenHover text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="volume-2" aria-hidden="true" class="lucide lucide-volume-2 w-4 h-4"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg> Read Charter Aloud
+          </button>
+        </div>
+
+        <div class="p-4 bg-gh-bg border border-gh-border rounded-xl space-y-3 text-xs text-gh-text">
+          <p><strong>Article 1:</strong> All Cocco Dispatch processes must maintain continuous screen-reader compliance and high-contrast visibility.</p>
+          <p><strong>Article 2:</strong> Dual-language accessibility (English &amp; Native Italian) is required across all automated narration interfaces.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-gh-header border-t border-gh-border py-4 px-4 text-xs text-gh-muted mt-auto" role="contentinfo">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle w-4 h-4 text-gh-green"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+        <span class="font-semibold text-gh-text">Cocco Dispatch Batch 01 (v1) — Master Accessibility Portal</span>
+      </div>
+      <div class="flex items-center space-x-4 font-mono">
+        <a href="https://siphokhuzwayo12-a11y.github.io/cooco-dispath-batch-01.v1/" target="_blank" rel="noopener" class="hover:text-gh-accent transition-colors flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe" aria-hidden="true" class="lucide lucide-globe w-3.5 h-3.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg> Live Hub
+        </a>
+        <span>•</span>
+        <a href="https://github.com/siphokhuzwayo12-a11y/cooco-dispath-batch-01.v1/" target="_blank" rel="noopener" class="hover:text-gh-accent transition-colors flex items-center gap-1">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i> Repository
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+    let voices = [];
+    let selectedLangMode = 'en'; // 'en' or 'it'
+
+    // Populate and Filter Speech Synthesis Voices
+    function populateVoiceList() {
+      if (!synth) return;
+      voices = synth.getVoices();
+      const voiceSelect = document.getElementById('voice-select');
+      voiceSelect.innerHTML = '';
+
+      if (voices.length === 0) {
+        const opt = document.createElement('option');
+        opt.textContent = 'Standard Web Voice';
+        opt.value = '';
+        voiceSelect.appendChild(opt);
+        return;
+      }
+
+      // Filter voices depending on selected language mode
+      let filteredVoices = voices.filter(v => {
+        if (selectedLangMode === 'it') {
+          return v.lang.startsWith('it');
+        }
+        return v.lang.startsWith('en');
+      });
+
+      // Fallback if no matching language voice found
+      if (filteredVoices.length === 0) {
+        filteredVoices = voices;
+      }
+
+      filteredVoices.forEach((voice, index) => {
+        const option = document.createElement('option');
+        option.textContent = `${voice.name} (${voice.lang})`;
+        if (voice.default) {
+          option.textContent += ' [Default]';
+        }
+        option.value = voice.name;
+        voiceSelect.appendChild(option);
+      });
+    }
+
+    if (synth) {
+      populateVoiceList();
+      if (speechSynthesis.onvoiceschanged !== undefined) {
+        speechSynthesis.onvoiceschanged = populateVoiceList;
+      }
+    }
+
+    // Set Language Mode (English vs Italian Native)
+    function setLanguage(lang) {
+      selectedLangMode = lang;
+      const btnEn = document.getElementById('lang-en');
+      const btnIt = document.getElementById('lang-it');
+
+      if (lang === 'it') {
+        btnIt.className = "px-2 py-1 rounded bg-gh-italian text-white text-xs font-bold transition-all shadow";
+        btnEn.className = "px-2 py-1 rounded text-gh-muted hover:text-white text-xs font-bold transition-all";
+        updateStatus('Italian Mode');
+      } else {
+        btnEn.className = "px-2 py-1 rounded bg-gh-accent text-gh-bg text-xs font-bold transition-all shadow";
+        btnIt.className = "px-2 py-1 rounded text-gh-muted hover:text-white text-xs font-bold transition-all";
+        updateStatus('English Mode');
+      }
+
+      populateVoiceList();
+    }
+
+    // Switch Cocco Dispatch Module
+    function switchModule(moduleId) {
+      stopSpeech();
+
+      const panels = document.querySelectorAll('.module-panel');
+      panels.forEach(panel => panel.classList.add('hidden'));
+
+      const activePanel = document.getElementById(`module-${moduleId}`);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+        activePanel.focus();
+      }
+
+      const dropdown = document.getElementById('module-dropdown');
+      if (dropdown.value !== moduleId) {
+        dropdown.value = moduleId;
+      }
+
+      updateStatus(`Loaded: ${moduleId}`);
+    }
+
+    // Speak Active Module Content
+    function speakCurrentModule() {
+      const dropdown = document.getElementById('module-dropdown');
+      speakSection(`module-${dropdown.value}`);
+    }
+
+    // Speak Specific Element Text
+    function speakSection(elementId) {
+      if (!synth) {
+        alert('Web Speech Synthesis is not supported in this browser environment.');
+        return;
+      }
+
+      stopSpeech();
+
+      const element = document.getElementById(elementId);
+      if (!element) return;
+
+      const text = element.innerText || element.textContent;
+      currentUtterance = new SpeechSynthesisUtterance(text);
+
+      // Select Voice
+      const voiceSelect = document.getElementById('voice-select');
+      const selectedVoiceName = voiceSelect.value;
+      const matchedVoice = voices.find(v => v.name === selectedVoiceName);
+
+      if (matchedVoice) {
+        currentUtterance.voice = matchedVoice;
+        currentUtterance.lang = matchedVoice.lang;
+      } else if (selectedLangMode === 'it') {
+        currentUtterance.lang = 'it-IT';
+      } else {
+        currentUtterance.lang = 'en-US';
+      }
+
+      // Rates and Pitch Controls
+      const rateSelect = document.getElementById('rate-select');
+      const pitchSelect = document.getElementById('pitch-select');
+
+      currentUtterance.rate = parseFloat(rateSelect.value) || 1.0;
+      currentUtterance.pitch = parseFloat(pitchSelect.value) || 1.0;
+
+      currentUtterance.onstart = () => {
+        updateStatus(selectedLangMode === 'it' ? 'In lettura...' : 'Speaking...');
+        element.classList.add('narrator-highlight');
+      };
+
+      currentUtterance.onend = () => {
+        updateStatus(selectedLangMode === 'it' ? 'Fatto' : 'Finished');
+        element.classList.remove('narrator-highlight');
+      };
+
+      currentUtterance.onerror = () => {
+        updateStatus('Speech Error');
+        element.classList.remove('narrator-highlight');
+      };
+
+      synth.speak(currentUtterance);
+    }
+
+    // Pause Speech
+    function pauseSpeech() {
+      if (synth && synth.speaking) {
+        if (synth.paused) {
+          synth.resume();
+          updateStatus('Speaking...');
+        } else {
+          synth.pause();
+          updateStatus('Paused');
+        }
+      }
+    }
+
+    // Stop Speech
+    function stopSpeech() {
+      if (synth) {
+        synth.cancel();
+        updateStatus('Ready');
+        document.querySelectorAll('.narrator-highlight').forEach(el => {
+          el.classList.remove('narrator-highlight');
+        });
+      }
+    }
+
+    // Update Status Badge
+    function updateStatus(msg) {
+      const statusEl = document.getElementById('narrator-status');
+      if (statusEl) {
+        statusEl.textContent = msg;
+      }
+    }
+
+    // Toggle High Contrast Mode
+    function toggleHighContrast() {
+      document.body.classList.toggle('high-contrast-mode');
+    }
+
+    // Render Telemetry Chart
+    function initChart() {
+      const ctx = document.getElementById('overviewChart');
+      if (!ctx) return;
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '24:00'],
+          datasets: [
+            {
+              label: 'Broiler Temp (°C)',
+              data: [33.5, 33.2, 32.8, 32.4, 32.5, 33.0, 33.1],
+              borderColor: '#f87171',
+              backgroundColor: 'rgba(248, 113, 113, 0.1)',
+              fill: true,
+              tension: 0.3
+            },
+            {
+              label: 'Bio-Solar Output (kW)',
+              data: [12.0, 10.5, 28.4, 48.6, 42.1, 22.0, 14.2],
+              borderColor: '#58a6ff',
+              backgroundColor: 'rgba(88, 166, 255, 0.05)',
+              fill: true,
+              tension: 0.3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { color: '#8b949e', font: { size: 11 } }
+            }
+          },
+          scales: {
+            x: { grid: { color: '#30363d' }, ticks: { color: '#8b949e' } },
+            y: { grid: { color: '#30363d' }, ticks: { color: '#8b949e' } }
+          }
+        }
+      });
+    }
+
+    window.onload = function() {
+      initChart();
+    };
+  </script>
+
+</body></html>

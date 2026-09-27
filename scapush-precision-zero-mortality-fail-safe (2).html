@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!-- saved from url=(0178)file:///G:/My%20Drive/%F0%9F%93%82THE-SOVEREIGN-RESPIRATORY-SCRP-VAULT/cocco-italia-broiler/Scapush%20Precision%20-%20Zero-Mortality%20Microclimate%20Protocol%20Architecture.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scapush Precision - Zero-Mortality Microclimate Protocol Architecture</title>
+    <style>
+        :root {
+            --bg-base: #070d19;
+            --panel-bg: #0f172a;
+            --panel-border: #1e293b;
+            --accent-primary: #38bdf8;
+            --accent-active: #0284c7;
+            --status-nominal: #4ade80;
+            --status-alert: #f87171;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-sub: #cbd5e1;
+            --focus-ring: #f59e0b;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            margin: 0;
+            padding: 24px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* High Visibility Focus Outline for Accessibility */
+        :focus-visible {
+            outline: 3px solid var(--focus-ring) !important;
+            outline-offset: 3px !important;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid var(--accent-primary);
+            border-radius: 8px;
+            padding: 20px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .title-block { display: flex; flex-direction: column; }
+        .title { font-size: 1.4rem; font-weight: 800; color: var(--accent-primary); letter-spacing: 0.5px; }
+        .subtitle { font-size: 0.9rem; color: var(--text-muted); margin-top: 4px; }
+        .badge {
+            background-color: var(--accent-active);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 340px 1fr 360px;
+            gap: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .grid-layout { grid-template-columns: 1fr; }
+        }
+
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--accent-active);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .control-group { margin-bottom: 18px; }
+        .control-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .slider-val { color: var(--accent-primary); font-weight: 700; font-family: monospace; }
+        .baseline-hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; display: block; }
+        
+        input[type=range] {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            accent-color: var(--accent-primary);
+            cursor: pointer;
+            background: #334155;
+        }
+
+        .btn-reset {
+            background: var(--accent-active);
+            color: #ffffff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+        .btn-reset:hover { background: #0369a1; }
+        .btn-reset:active { transform: scale(0.97); }
+
+        .pod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        @media (max-width: 640px) { .pod-grid { grid-template-columns: 1fr; } }
+
+        .pod-card {
+            background: #080e1a;
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 14px;
+            position: relative;
+            transition: border-color 0.2s ease;
+        }
+        .pod-card.active { border-color: var(--accent-primary); background: #0c1629; }
+        .pod-header {
+            font-weight: 700;
+            color: var(--accent-primary);
+            font-size: 0.92rem;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pod-stat {
+            font-size: 0.83rem;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+        .pod-stat strong { color: var(--text-main); font-family: monospace; }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: var(--status-nominal);
+            box-shadow: 0 0 8px var(--status-nominal);
+        }
+        .status-dot.alert {
+            background-color: var(--status-alert);
+            box-shadow: 0 0 8px var(--status-alert);
+        }
+
+        .narration-box {
+            background: #040810;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            padding: 14px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.83rem;
+            color: var(--accent-primary);
+            height: 380px;
+            overflow-y: auto;
+            line-height: 1.5;
+        }
+        .log-entry { margin-bottom: 10px; border-bottom: 1px dashed #1e293b; padding-bottom: 8px; }
+        .log-time { color: var(--text-muted); font-weight: 700; }
+        .log-alert { color: var(--status-alert); font-weight: 600; }
+        .log-success { color: var(--status-nominal); font-weight: 600; }
+
+        .mortality-gauge {
+            text-align: center;
+            padding: 16px;
+            background: #080e1a;
+            border-radius: 8px;
+            border: 1px solid var(--panel-border);
+            margin-top: 16px;
+        }
+        .gauge-val { font-size: 1.8rem; font-weight: 800; color: var(--status-nominal); letter-spacing: 0.5px; }
+        .gauge-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+
+        /* Pedagogical Protocol Section */
+        .teach-section {
+            grid-column: 1 / -1;
+            background: #0f172a;
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 10px;
+        }
+        .teach-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--accent-primary);
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .teach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .teach-card {
+            background: #080e1a;
+            border: 1px solid #1e293b;
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .teach-card h4 {
+            margin: 0 0 8px 0;
+            color: #f8fafc;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .teach-card p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        /* Screen Reader visually hidden utility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ACCESSIBILITY: Screen Reader Live Region for Telemetry Updates -->
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true">SYSTEM RESET: Baseline microclimate parameters restored across all controls.</div>
+
+    <header class="header" role="banner">
+        <div class="title-block">
+            <h1 class="title" style="margin:0;">Scapush Precision: Zero-Mortality Microclimate Simulator</h1>
+            <div class="subtitle">Sovereign 4-Pod Brooder Environmental Feedback Loop &amp; Telemetry Command Architecture</div>
+        </div>
+        <div>
+            <span class="badge" id="sys-status-badge" style="background-color: var(--accent-active);">SYSTEM STATE: CLAMPED ZERO</span>
+        </div>
+    </header>
+
+    <main class="grid-layout">
+        <!-- CONTROLS PANEL -->
+        <section class="panel" aria-labelledby="controls-heading">
+            <div class="panel-title">
+                <h2 id="controls-heading" style="font-size: 1rem; margin:0;">Environmental Injectors</h2>
+                <button class="btn-reset" onclick="resetBaseline()" aria-label="Reset all parameters to optimal baseline">Reset Baseline</button>
+            </div>
+            
+            <div class="control-group">
+                <div class="control-label">
+                    <label for="slider-temp">Ambient Temperature (Pod 1)</label>
+                    <span class="slider-val" id="val-temp">33.5°C</span>
+                </div>
+                <input type="range" min="20" max="40" value="33.5" step="0.5" id="slider-temp" oninput="updateSim()" aria-valuemin="20" aria-valuemax="40" aria-valuenow="33.5" aria-valuetext="33.5 Degrees Celsius">
+                <span class="baseline-hint">Optimal Target: 33.0°C - 34.0°C (Brooding Phase)</span>
+            </div>
+            
+            <div class="control-group">
+                <div class="control-label">
+                    <label for="slider-nh3">Ammonia Concentration (NH₃)</label>
+                    <span class="slider-val" id="val-nh3">2.0 ppm</span>
+                </div>
+                <input type="range" min="0" max="30" value="2.1" step="0.5" id="slider-nh3" oninput="updateSim()" aria-valuemin="0" aria-valuemax="30" aria-valuenow="2" aria-valuetext="2.1 parts per million">
+                <span class="baseline-hint">Safe Threshold: &lt;10.0 ppm (Prevent Cilia Damage)</span>
+            </div>
+
+            <div class="control-group">
+                <div class="control-label">
+                    <label for="slider-press">Differential Static Pressure</label>
+                    <span class="slider-val" id="val-press">+28 Pa</span>
+                </div>
+                <input type="range" min="0" max="40" value="28" step="1" id="slider-press" oninput="updateSim()" aria-valuemin="0" aria-valuemax="40" aria-valuenow="28" aria-valuetext="Plus 28 Pascals">
+                <span class="baseline-hint">Safe Threshold: &gt;+10 Pa (Bio-Barrier Positive Pressure)</span>
+            </div>
+
+            <div class="control-group">
+                <div class="control-label">
+                    <label for="slider-draft">Air Draft Velocity</label>
+                    <span class="slider-val" id="val-draft">0.06 m/s</span>
+                </div>
+                <input type="range" min="0.01" max="0.50" value="0.06" step="0.01" id="slider-draft" oninput="updateSim()" aria-valuemin="0.01" aria-valuemax="0.50" aria-valuenow="0.06" aria-valuetext="0.06 meters per second">
+                <span class="baseline-hint">Safe Threshold: &lt;0.25 m/s (Prevent Hypothermic Chill)</span>
+            </div>
+
+            <div class="control-group">
+                <div class="control-label">
+                    <label for="slider-co2">Carbon Dioxide (CO₂)</label>
+                    <span class="slider-val" id="val-co2">900 ppm</span>
+                </div>
+                <input type="range" min="400" max="4000" value="890" step="50" id="slider-co2" oninput="updateSim()" aria-valuemin="400" aria-valuemax="4000" aria-valuenow="900" aria-valuetext="890 parts per million">
+                <span class="baseline-hint">Safe Threshold: &lt;2,500 ppm (Prevent Ascites Syndrome)</span>
+            </div>
+
+            <div class="mortality-gauge" aria-live="polite">
+                <div class="gauge-label">System Mortality Index</div>
+                <div class="gauge-val" id="mort-val" style="color: var(--status-nominal);">0.00%</div>
+                <div style="font-size: 0.8rem; color: var(--status-nominal); font-weight: 700; margin-top: 4px;" id="mort-status">STATE: CLAMPED ZERO</div>
+            </div>
+        </section>
+
+        <!-- 4 POD MATRIX GRID -->
+        <section class="panel" aria-labelledby="telemetry-heading">
+            <div class="panel-title">
+                <h2 id="telemetry-heading" style="font-size: 1rem; margin:0;">4-Pod Nursery Matrix Telemetry</h2>
+            </div>
+            <div class="pod-grid">
+                <article class="pod-card active" id="pod1" aria-labelledby="pod1-title">
+                    <div class="pod-header">
+                        <span id="pod1-title">POD 1: Brooding (D0-7)</span>
+                        <span class="status-dot" id="dot1" role="img" aria-label="Status: Nominal"></span>
+                    </div>
+                    <div class="pod-stat"><span>Temp Target:</span><strong id="p1-temp">33.5°C</strong></div>
+                    <div class="pod-stat"><span>NH₃ Level:</span><strong id="p1-nh3">2.0 ppm</strong></div>
+                    <div class="pod-stat"><span>Pressure:</span><strong id="p1-press">+28 Pa</strong></div>
+                    <div class="pod-stat"><span>CO₂ Conc:</span><strong id="p1-co2">900 ppm</strong></div>
+                    <div class="pod-stat"><span>Air Draft:</span><strong id="p1-draft">0.06 m/s</strong></div>
+                </article>
+
+                <article class="pod-card" id="pod2" aria-labelledby="pod2-title">
+                    <div class="pod-header">
+                        <span id="pod2-title">POD 2: Early Dev (D8-14)</span>
+                        <span class="status-dot" id="dot2" role="img" aria-label="Status: Nominal"></span>
+                    </div>
+                    <div class="pod-stat"><span>Temp Target:</span><strong>30.0°C</strong></div>
+                    <div class="pod-stat"><span>NH₃ Level:</span><strong>2.8 ppm</strong></div>
+                    <div class="pod-stat"><span>Pressure:</span><strong>+25 Pa</strong></div>
+                    <div class="pod-stat"><span>CO₂ Conc:</span><strong>950 ppm</strong></div>
+                    <div class="pod-stat"><span>Air Draft:</span><strong>0.08 m/s</strong></div>
+                </article>
+
+                <article class="pod-card" id="pod3" aria-labelledby="pod3-title">
+                    <div class="pod-header">
+                        <span id="pod3-title">POD 3: Feathering (D15-21)</span>
+                        <span class="status-dot" id="dot3" role="img" aria-label="Status: Nominal"></span>
+                    </div>
+                    <div class="pod-stat"><span>Temp Target:</span><strong>27.0°C</strong></div>
+                    <div class="pod-stat"><span>NH₃ Level:</span><strong>3.2 ppm</strong></div>
+                    <div class="pod-stat"><span>Pressure:</span><strong>+25 Pa</strong></div>
+                    <div class="pod-stat"><span>CO₂ Conc:</span><strong>1,020 ppm</strong></div>
+                    <div class="pod-stat"><span>Air Draft:</span><strong>0.11 m/s</strong></div>
+                </article>
+
+                <article class="pod-card" id="pod4" aria-labelledby="pod4-title">
+                    <div class="pod-header">
+                        <span id="pod4-title">POD 4: Grow-Out (D22-28)</span>
+                        <span class="status-dot" id="dot4" role="img" aria-label="Status: Nominal"></span>
+                    </div>
+                    <div class="pod-stat"><span>Temp Target:</span><strong>23.0°C</strong></div>
+                    <div class="pod-stat"><span>NH₃ Level:</span><strong>3.9 ppm</strong></div>
+                    <div class="pod-stat"><span>Pressure:</span><strong>+20 Pa</strong></div>
+                    <div class="pod-stat"><span>CO₂ Conc:</span><strong>1,100 ppm</strong></div>
+                    <div class="pod-stat"><span>Air Draft:</span><strong>0.14 m/s</strong></div>
+                </article>
+            </div>
+        </section>
+
+        <!-- NARRATION TELEMETRY LOG -->
+        <section class="panel" aria-labelledby="log-heading">
+            <div class="panel-title">
+                <h2 id="log-heading" style="font-size: 1rem; margin:0;">Voice &amp; Telemetry Narrative Log</h2>
+            </div>
+            <div class="narration-box" id="narration-log" tabindex="0" role="region" aria-label="Automated Telemetry Log Output"><div class="log-entry"><span class="log-time">[02:35:31]</span> <span class="log-success">SYSTEM RESET: Baseline microclimate parameters restored across all controls.</span></div><div class="log-entry"><span class="log-time">[02:35:12]</span> <span class="log-alert">CRITICAL: Ammonia 14.5 ppm! Activating sub-litter vacuum belt evacuation.</span></div><div class="log-entry"><span class="log-time">[02:34:52]</span> <span class="log-success">SYSTEM RESET: Baseline microclimate parameters restored across all controls.</span></div><div class="log-entry"><span class="log-time">[02:32:37]</span> <span class="log-alert">ALERT: Draft velocity 0.38 m/s! Adjusting airflow baffle plates.</span></div><div class="log-entry"><span class="log-time">[02:32:24]</span> <span class="log-success">SYSTEM RESET: Baseline microclimate parameters restored across all controls.</span></div><div class="log-entry"><span class="log-time">[02:31:52]</span> <span class="log-alert">ALERT: Pod 1 Temp 37.5°C out of bounds! Modulating PID ceramic heating.</span></div><div class="log-entry"><span class="log-time">[02:31:33]</span> <span class="log-alert">CRITICAL: Ammonia 11 ppm! Activating sub-litter vacuum belt evacuation.</span></div><div class="log-entry"><span class="log-time">[02:30:35]</span> <span class="log-success">SYSTEM RESET: Baseline microclimate parameters restored across all controls.</span></div>
+                <div class="log-entry">
+                    <span class="log-time">[INIT]</span> 
+                    <span class="log-success">SCAPUSH PRECISION PROTOCOL: Active. All parameters clamped within optimal boundaries. Baseline Mortality state locked at 0.00%.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PEDAGOGICAL / TEACHABILITY MODULE -->
+        <section class="teach-section" aria-labelledby="teach-heading">
+            <h2 class="teach-title" id="teach-heading">Scapush Precision Zero-Mortality Core Principles</h2>
+            <div class="teach-grid">
+                <div class="teach-card">
+                    <h4>1. Thermal Stabilization (PID Ceramic)</h4>
+                    <p>Day-old chicks lack thermo-regulatory capability. Maintaining a precise 33.5°C baseline in Pod 1 prevents chilling hypothermia and yolk sac non-absorption.</p>
+                </div>
+                <div class="teach-card">
+                    <h4>2. Ammonia Protection (&lt;10 ppm)</h4>
+                    <p>Ammonia levels above 10 ppm paralyze respiratory cilia in poultry. Automated sub-litter vacuum evacuation engages dynamically to suppress toxic spikes.</p>
+                </div>
+                <div class="teach-card">
+                    <h4>3. Positive Bio-Barrier (+28 Pa)</h4>
+                    <p>Positive differential pressure forces clean air outward, preventing airborne pathogen ingress across nursery pod boundaries without chemical dependency.</p>
+                </div>
+                <div class="teach-card">
+                    <h4>4. Ascites Mitigation (&lt;2500 ppm CO₂)</h4>
+                    <p>High CO₂ drives pulmonary hypertension leading to fatal Ascites. Modulating HEPA dampers maintains optimal oxygenation and metabolic energy efficiency.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const BASELINE = {
+            temp: 33.5,
+            nh3: 2.1,
+            press: 28,
+            draft: 0.06,
+            co2: 890
+        };
+
+        let lastAnnouncedMsg = "";
+
+        function announceScreenReader(text) {
+            const announcer = document.getElementById('sr-announcer');
+            if (announcer) {
+                announcer.innerText = text;
+            }
+        }
+
+        function speakNarration(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                let utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 1.0;
+                utterance.pitch = 1.0;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function resetBaseline() {
+            document.getElementById('slider-temp').value = BASELINE.temp;
+            document.getElementById('slider-nh3').value = BASELINE.nh3;
+            document.getElementById('slider-press').value = BASELINE.press;
+            document.getElementById('slider-draft').value = BASELINE.draft;
+            document.getElementById('slider-co2').value = BASELINE.co2;
+
+            updateSim();
+
+            let log = document.getElementById('narration-log');
+            let timeStr = new Date().toTimeString().split(' ')[0];
+            const msg = "SYSTEM RESET: Baseline microclimate parameters restored across all controls.";
+            addLog(log, timeStr, msg, false);
+            speakNarration("System reset complete. Scapush Precision baseline restored.");
+            announceScreenReader(msg);
+        }
+
+        function updateSim() {
+            let temp = parseFloat(document.getElementById('slider-temp').value);
+            let nh3 = parseFloat(document.getElementById('slider-nh3').value);
+            let press = parseInt(document.getElementById('slider-press').value, 10);
+            let draft = parseFloat(document.getElementById('slider-draft').value);
+            let co2 = parseInt(document.getElementById('slider-co2').value, 10);
+
+            // Update UI Labels
+            document.getElementById('val-temp').innerText = temp.toFixed(1) + '°C';
+            document.getElementById('val-nh3').innerText = nh3.toFixed(1) + ' ppm';
+            document.getElementById('val-press').innerText = '+' + press + ' Pa';
+            document.getElementById('val-draft').innerText = draft.toFixed(2) + ' m/s';
+            document.getElementById('val-co2').innerText = co2 + ' ppm';
+
+            // Update ARIA values
+            document.getElementById('slider-temp').setAttribute('aria-valuenow', temp);
+            document.getElementById('slider-nh3').setAttribute('aria-valuenow', nh3);
+            document.getElementById('slider-press').setAttribute('aria-valuenow', press);
+            document.getElementById('slider-draft').setAttribute('aria-valuenow', draft);
+            document.getElementById('slider-co2').setAttribute('aria-valuenow', co2);
+
+            // Update Pod 1 Telemetry Display
+            document.getElementById('p1-temp').innerText = temp.toFixed(1) + '°C';
+            document.getElementById('p1-nh3').innerText = nh3.toFixed(1) + ' ppm';
+            document.getElementById('p1-press').innerText = '+' + press + ' Pa';
+            document.getElementById('p1-draft').innerText = draft.toFixed(2) + ' m/s';
+            document.getElementById('p1-co2').innerText = co2 + ' ppm';
+
+            let log = document.getElementById('narration-log');
+            let dot1 = document.getElementById('dot1');
+            let mortVal = document.getElementById('mort-val');
+            let mortStatus = document.getElementById('mort-status');
+            let badge = document.getElementById('sys-status-badge');
+
+            let alertTriggered = false;
+            let timeStr = new Date().toTimeString().split(' ')[0];
+            let narrationMsg = "";
+            let logMsg = "";
+
+            if (temp < 30.0 || temp > 36.0) {
+                alertTriggered = true;
+                narrationMsg = `Temperature anomaly detected at ${temp} degrees Celsius. Modulating ceramic heating plates to maintain target microclimate.`;
+                logMsg = `ALERT: Pod 1 Temp ${temp}°C out of bounds! Modulating PID ceramic heating.`;
+            } else if (nh3 > 10.0) {
+                alertTriggered = true;
+                narrationMsg = `Ammonia breach detected at ${nh3} parts per million. Activating sub-litter vacuum evacuation to prevent cilia paralysis.`;
+                logMsg = `CRITICAL: Ammonia ${nh3} ppm! Activating sub-litter vacuum belt evacuation.`;
+            } else if (press < 10) {
+                alertTriggered = true;
+                narrationMsg = `Pressure drop to ${press} Pascals. Bio-barrier compromised. Ramping air handler intake.`;
+                logMsg = `WARNING: Pressure dropped to +${press} Pa! Ramping intake air handlers.`;
+            } else if (draft > 0.25) {
+                alertTriggered = true;
+                narrationMsg = `Draft velocity spike at ${draft} meters per second. Adjusting baffle plates to prevent wind-chill hypothermia.`;
+                logMsg = `ALERT: Draft velocity ${draft} m/s! Adjusting airflow baffle plates.`;
+            } else if (co2 > 2500) {
+                alertTriggered = true;
+                narrationMsg = `Carbon dioxide exceeds ${co2} parts per million. Opening fresh HEPA intake dampers to prevent Ascites Syndrome.`;
+                logMsg = `DANGER: CO₂ ${co2} ppm! Opening HEPA fresh air dampers.`;
+            }
+
+            if (alertTriggered) {
+                dot1.className = 'status-dot alert';
+                dot1.setAttribute('aria-label', 'Status: Alert Active');
+                mortVal.innerText = '0.00% (STABILIZING)';
+                mortVal.style.color = 'var(--status-alert)';
+                mortStatus.innerText = 'FAIL-SAFE ACTIVE - CLAMPED AT ZERO';
+                mortStatus.style.color = 'var(--status-alert)';
+                badge.innerText = 'SYSTEM STATE: FAIL-SAFE ENGAGED';
+                badge.style.backgroundColor = '#b91c1c';
+
+                if (logMsg !== lastAnnouncedMsg) {
+                    addLog(log, timeStr, logMsg, true);
+                    speakNarration(narrationMsg);
+                    announceScreenReader(logMsg);
+                    lastAnnouncedMsg = logMsg;
+                }
+            } else {
+                dot1.className = 'status-dot';
+                dot1.setAttribute('aria-label', 'Status: Nominal');
+                mortVal.innerText = '0.00%';
+                mortVal.style.color = 'var(--status-nominal)';
+                mortStatus.innerText = 'STATE: CLAMPED ZERO';
+                mortStatus.style.color = 'var(--status-nominal)';
+                badge.innerText = 'SYSTEM STATE: CLAMPED ZERO';
+                badge.style.backgroundColor = 'var(--accent-active)';
+                lastAnnouncedMsg = "";
+            }
+        }
+
+        function addLog(container, time, text, isAlert) {
+            let div = document.createElement('div');
+            div.className = 'log-entry';
+            let classNm = isAlert ? 'log-alert' : 'log-success';
+            div.innerHTML = `<span class="log-time">[${time}]</span> <span class="${classNm}">${text}</span>`;
+            container.insertBefore(div, container.firstChild);
+        }
+    </script>
+
+</body></html>

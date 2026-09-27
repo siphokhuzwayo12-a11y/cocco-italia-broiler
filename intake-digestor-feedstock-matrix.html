@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<!-- saved from url=(0227)file:///G:/My%20Drive/%F0%9F%93%82TRANSMITABLE-REPOSITORY-COCCO-ETHEKWINI/Plot_For_Farming_Artifacts/LEP-IMP-ENG-2026_Bio-Solar_Engine/Integrated%20Telemetry%20&%20Feedstock%20Matrix%20_%20Lwandile%20Engineering%20Projects.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated Telemetry &amp; Feedstock Matrix | Lwandile Engineering Projects</title>
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --panel-bg: #161b22;
+            --border-color: #30363d;
+            --accent-green: #238636;
+            --accent-blue: #58a6ff;
+            --accent-amber: #d29922;
+            --accent-purple: #bc8cff;
+            --accent-red: #da3633;
+            --text-main: #c9d1d9;
+            --text-bright: #f0f6fc;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sovereign-header {
+            text-align: center;
+            padding: 14px;
+            background: rgba(88, 166, 255, 0.1);
+            border: 1px solid var(--accent-blue);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: var(--accent-blue);
+            letter-spacing: 1.5px;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+
+        .vision-drawer {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .vision-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+
+        .vision-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .vision-title h2 {
+            margin: 0;
+            color: var(--text-bright);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .vision-title p {
+            margin: 4px 0 0 0;
+            color: #8b949e;
+            font-size: 13px;
+        }
+
+        .audio-btn {
+            background: var(--accent-blue);
+            color: #000000;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vision-quote {
+            line-height: 1.7;
+            font-size: 14px;
+            color: var(--text-bright);
+        }
+
+        .scada-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .scada-grid { grid-template-columns: 1fr; }
+        }
+
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .panel h3 {
+            margin-top: 0;
+            color: var(--text-bright);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .control-group {
+            margin-bottom: 16px;
+            background: var(--bg-dark);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .control-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-bright);
+        }
+
+        .control-group input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent-blue);
+        }
+
+        .steward-teaching-box {
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--accent-blue);
+            line-height: 1.4;
+            border-left: 3px solid var(--accent-blue);
+            padding: 6px 10px;
+            background: rgba(88, 166, 255, 0.05);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .telemetry-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin: 4px 0;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .status-optimal { background: rgba(35, 134, 54, 0.2); color: #3fb950; border: 1px solid var(--accent-green); }
+        .status-warning { background: rgba(210, 153, 34, 0.2); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+        .status-danger { background: rgba(218, 54, 51, 0.2); color: var(--accent-red); border: 1px solid var(--accent-red); }
+
+        .audit-terminal {
+            background: #040d12;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 12px;
+            color: #58a6ff;
+            height: 120px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        .narrator-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--text-bright);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sovereign-header">
+        💧 LWANDILE ENGINEERING PROJECTS • INTEGRATED TELEMETRY &amp; FEEDSTOCK WATER RATIO MATRIX
+    </div>
+
+    <div class="vision-drawer">
+        <div class="vision-header">
+            <div class="vision-title">
+                <span style="font-size: 28px;">🚰</span>
+                <div>
+                    <h2>Voice of Vision | Intake Telemetry &amp; Digester Feedstock Hydraulics</h2>
+                    <p>R3.1M MVP Engine (5,720 Broilers + 160 Swine) • Precision Feedstock-to-Water Dilution</p>
+                </div>
+            </div>
+            <button onclick="toggleVisionAudio()" id="audio-btn" class="audio-btn" style="background: var(--accent-blue);"><span>▶</span> Listen to Directive</button>
+        </div>
+
+        <div class="vision-quote">
+            <p>
+                <strong style="color: var(--accent-blue);">Sovereign Feedstock-Water Inscription:</strong> 
+                "Drinking water drives livestock growth; feedstock dilution water secures digester performance. Dry poultry litter requires a 1:2.7 water ratio, while swine slurry needs a 1:0.4 water ratio. Combined co-digestion achieves a 1:1 blend ratio, ensuring an 8.2% Total Solids slurry for zero-clogging energy conversion."
+            </p>
+        </div>
+
+        <div class="narrator-toggle">
+            <input type="checkbox" id="voice-activation-toggle" checked="">
+            <label for="voice-activation-toggle"><strong>Enable Voice Narrator on Every Activation &amp; Control Adjustment</strong></label>
+        </div>
+    </div>
+
+    <div class="scada-grid">
+        <!-- PANEL 1: BROILER INTAKE & DILUTION -->
+        <div class="panel">
+            <h3>🐔 Broiler Intake &amp; Feedstock Ratio</h3>
+
+            <div class="control-group">
+                <label>Flock Count: <span id="broiler-val">5,700</span> Birds</label>
+                <input type="range" id="broiler-input" min="1000" max="20000" step="100" value="5720" oninput="handleBroilerInput(this.value)">
+                <div class="steward-teaching-box" id="steward-broiler-teaching">📜 <strong>Steward's Teaching:</strong> 5,700 broilers generate ~363 kg litter/day. Dilute at 1:2.7 ratio (980 L water) for 8.1% TS.</div>
+            </div>
+
+            <div class="control-group">
+                <label>Flock Age: <span id="age-val">14</span> Day(s) old</label>
+                <input type="range" id="age-input" min="1" max="35" value="14" oninput="handleAgeInput(this.value)">
+            </div>
+
+            <div>
+                <span style="font-size: 11px; color: #8b949e;">Litter Feedstock-to-Water Ratio</span>
+                <div class="telemetry-value" style="color: var(--accent-purple);">1 Part Litter : 2.7 Water</div>
+            </div>
+
+            <div style="margin-top: 8px;">
+                <span style="font-size: 11px; color: #8b949e;">Litter Dilution Water Needed</span>
+                <div id="broiler-dilution-water" class="telemetry-value" style="color: var(--accent-blue);">980 L / day</div>
+            </div>
+        </div>
+
+        <!-- PANEL 2: SWINE INTAKE & DILUTION -->
+        <div class="panel">
+            <h3>🐖 Swine Intake &amp; Feedstock Ratio</h3>
+
+            <div class="control-group">
+                <label>Swine Count: <span id="swine-val">160</span> Head</label>
+                <input type="range" id="swine-input" min="50" max="1000" step="10" value="160" oninput="handleSwineInput(this.value)">
+                <div class="steward-teaching-box" id="steward-swine-teaching">📜 <strong>Steward's Teaching:</strong> 160 swine generate ~768 kg slurry/day. Dilute at 1:0.4 ratio (307 L water) for 8.0% TS.</div>
+            </div>
+
+            <div class="control-group">
+                <label>Avg Swine Mass: <span id="weight-val">60</span> kg</label>
+                <input type="range" id="weight-input" min="15" max="110" step="5" value="60" oninput="handleWeightInput(this.value)">
+            </div>
+
+            <div>
+                <span style="font-size: 11px; color: #8b949e;">Slurry Feedstock-to-Water Ratio</span>
+                <div class="telemetry-value" style="color: var(--accent-purple);">1 Part Slurry : 0.4 Water</div>
+            </div>
+
+            <div style="margin-top: 8px;">
+                <span style="font-size: 11px; color: #8b949e;">Slurry Dilution Water Needed</span>
+                <div id="swine-dilution-water" class="telemetry-value" style="color: var(--accent-blue);">307 L / day</div>
+            </div>
+        </div>
+
+        <!-- PANEL 3: COMBINED DIGESTER RHEOLOGY -->
+        <div class="panel">
+            <h3>🌀 Co-Digestion Rheology Summary</h3>
+
+            <div style="margin-bottom: 10px;">
+                <span style="font-size: 11px; color: #8b949e;">Combined Feedstock-Water Ratio</span>
+                <div class="telemetry-value" style="color: var(--accent-purple);">1 Part Waste : 1 Part Water</div>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <span style="font-size: 11px; color: #8b949e;">Total Dilution Water Stream</span>
+                <div id="total-dilution" class="telemetry-value" style="color: var(--accent-blue);">1,287 L / day</div>
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <span style="font-size: 11px; color: #8b949e;">Target Slurry Viscosity</span>
+                <div id="ts-target" class="telemetry-value" style="color: #3fb950;">8.2% Total Solids</div>
+            </div>
+
+            <div>
+                <span id="rheology-badge" class="status-badge status-optimal">NON-CLOGGING HYDRAULICS ACTIVE</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="audit-terminal" id="terminal-log">
+        [SYSTEM STARTUP]: Lwandile Integrated Telemetry &amp; Feedstock Ratio Module Initialized.<br>
+        [RHEOLOGY LOCK]: Poultry Litter Ratio (1:2.7) | Swine Slurry Ratio (1:0.4) | Co-Digestion (1:1).<br>
+        [NARRATOR SYSTEM]: Voice Narrator on Every Activation initialized.<br>
+        [STEWARD TEACHINGS]: Digester Slurry Viscosity Target Locked at 8.2% TS.
+    <br>[11:49:39 PM]: [NARRATOR ACTIVATION]: Feedstock-Water Telemetry directive engaged.<br>[11:49:41 PM]: [NARRATOR]: Telemetry directive audio paused.<br>[11:51:07 PM]: [NARRATOR ACTIVATION]: Broiler age set to Day 21. Updating feed intake and manure solid factors.<br>[11:51:09 PM]: [NARRATOR ACTIVATION]: Broiler age set to Day 26. Updating feed intake and manure solid factors.<br>[11:51:18 PM]: [NARRATOR ACTIVATION]: Broiler age set to Day 5. Updating feed intake and manure solid factors.<br>[11:51:24 PM]: [NARRATOR ACTIVATION]: Broiler age set to Day 16. Updating feed intake and manure solid factors.<br>[11:51:28 PM]: [NARRATOR ACTIVATION]: Broiler age set to Day 29. Updating feed intake and manure solid factors.<br>[11:51:31 PM]: [NARRATOR ACTIVATION]: Swine mass updated to 75 kilograms. Recalculating slurry volume and dilution ratio balance.<br>[11:51:32 PM]: [NARRATOR ACTIVATION]: Swine mass updated to 100 kilograms. Recalculating slurry volume and dilution ratio balance.<br>[11:51:35 PM]: [NARRATOR ACTIVATION]: Swine count set to 990 head. Recalculating swine slurry dilution water flow.<br>[11:51:37 PM]: [NARRATOR ACTIVATION]: Broiler count updated to 19,700 birds. Recalculating litter dilution water requirement.<br>[11:51:39 PM]: [NARRATOR ACTIVATION]: Broiler age set to Day 35. Updating feed intake and manure solid factors.<br>[11:51:46 PM]: [NARRATOR ACTIVATION]: Broiler count updated to 9,800 birds. Recalculating litter dilution water requirement.<br>[11:51:48 PM]: [NARRATOR ACTIVATION]: Broiler count updated to 7,000 birds. Recalculating litter dilution water requirement.<br>[11:51:49 PM]: [NARRATOR ACTIVATION]: Broiler count updated to 4,200 birds. Recalculating litter dilution water requirement.<br>[11:51:50 PM]: [NARRATOR ACTIVATION]: Broiler count updated to 2,100 birds. Recalculating litter dilution water requirement.<br>[11:51:52 PM]: [NARRATOR ACTIVATION]: Broiler count updated to 4,600 birds. Recalculating litter dilution water requirement.<br>[11:51:55 PM]: [NARRATOR ACTIVATION]: Broiler count updated to 5,800 birds. Recalculating litter dilution water requirement.<br>[11:52:00 PM]: [NARRATOR ACTIVATION]: Swine count set to 260 head. Recalculating swine slurry dilution water flow.<br>[11:52:01 PM]: [NARRATOR ACTIVATION]: Swine count set to 160 head. Recalculating swine slurry dilution water flow.<br>[11:52:12 PM]: [NARRATOR ACTIVATION]: Broiler age set to Day 11. Updating feed intake and manure solid factors.<br>[11:52:15 PM]: [NARRATOR ACTIVATION]: Swine mass updated to 35 kilograms. Recalculating slurry volume and dilution ratio balance.</div>
+
+</div>
+
+<script>
+let isSpeakingDirective = false;
+let speechDebounceTimer = null;
+
+const visionText = `Voice of Vision, Telemetry and Feedstock Water Ratio Matrix by Lwandile Engineering Projects. Poultry litter requires a one to two point seven water ratio, and swine slurry requires a one to zero point four ratio. Co digestion blends them at one to one, maintaining an eight point two percent total solids slurry for non clogging energy conversion. Proceed with Scapush Precision.`;
+
+function speakText(text) {
+    const isVoiceEnabled = document.getElementById('voice-activation-toggle').checked;
+    if (!isVoiceEnabled || !('speechSynthesis' in window)) return;
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 1.0;
+    utterance.pitch = 0.95;
+    window.speechSynthesis.speak(utterance);
+}
+
+function logTerminal(message) {
+    const log = document.getElementById('terminal-log');
+    const timestamp = new Date().toLocaleTimeString();
+    log.innerHTML += `<br>[${timestamp}]: ${message}`;
+    log.scrollTop = log.scrollHeight;
+}
+
+function handleBroilerInput(val) {
+    updateTelemetry();
+    clearTimeout(speechDebounceTimer);
+    speechDebounceTimer = setTimeout(() => {
+        const text = `Broiler count updated to ${parseInt(val).toLocaleString()} birds. Recalculating litter dilution water requirement.`;
+        speakText(text);
+        logTerminal(`[NARRATOR ACTIVATION]: ${text}`);
+    }, 350);
+}
+
+function handleAgeInput(val) {
+    updateTelemetry();
+    clearTimeout(speechDebounceTimer);
+    speechDebounceTimer = setTimeout(() => {
+        const text = `Broiler age set to Day ${val}. Updating feed intake and manure solid factors.`;
+        speakText(text);
+        logTerminal(`[NARRATOR ACTIVATION]: ${text}`);
+    }, 350);
+}
+
+function handleSwineInput(val) {
+    updateTelemetry();
+    clearTimeout(speechDebounceTimer);
+    speechDebounceTimer = setTimeout(() => {
+        const text = `Swine count set to ${val} head. Recalculating swine slurry dilution water flow.`;
+        speakText(text);
+        logTerminal(`[NARRATOR ACTIVATION]: ${text}`);
+    }, 350);
+}
+
+function handleWeightInput(val) {
+    updateTelemetry();
+    clearTimeout(speechDebounceTimer);
+    speechDebounceTimer = setTimeout(() => {
+        const text = `Swine mass updated to ${val} kilograms. Recalculating slurry volume and dilution ratio balance.`;
+        speakText(text);
+        logTerminal(`[NARRATOR ACTIVATION]: ${text}`);
+    }, 350);
+}
+
+function toggleVisionAudio() {
+    const btn = document.getElementById('audio-btn');
+    if ('speechSynthesis' in window) {
+        if (isSpeakingDirective) {
+            window.speechSynthesis.cancel();
+            isSpeakingDirective = false;
+            btn.innerHTML = '<span>▶</span> Listen to Directive';
+            btn.style.background = 'var(--accent-blue)';
+            logTerminal('[NARRATOR]: Telemetry directive audio paused.');
+        } else {
+            const utterance = new SpeechSynthesisUtterance(visionText);
+            utterance.rate = 0.92;
+            utterance.pitch = 0.95;
+            
+            utterance.onend = function() {
+                isSpeakingDirective = false;
+                btn.innerHTML = '<span>▶</span> Listen to Directive';
+                btn.style.background = 'var(--accent-blue)';
+            };
+
+            window.speechSynthesis.speak(utterance);
+            isSpeakingDirective = true;
+            btn.innerHTML = '<span>⏹</span> Pause Directive';
+            btn.style.background = 'var(--accent-red)';
+            logTerminal('[NARRATOR ACTIVATION]: Feedstock-Water Telemetry directive engaged.');
+        }
+    }
+}
+
+function updateTelemetry() {
+    const broilers = parseInt(document.getElementById('broiler-input').value);
+    const age = parseInt(document.getElementById('age-input').value);
+    const swine = parseInt(document.getElementById('swine-input').value);
+    const swineWeight = parseInt(document.getElementById('weight-input').value);
+
+    document.getElementById('broiler-val').innerText = broilers.toLocaleString();
+    document.getElementById('age-val').innerText = age;
+    document.getElementById('swine-val').innerText = swine;
+    document.getElementById('weight-val').innerText = swineWeight;
+
+    // Waste Calculations
+    const broilerFeedKg = (broilers * (12 + (age * 4.5))) / 1000;
+    const litterKg = Math.round(broilerFeedKg * 0.85);
+    const swineSlurryKg = Math.round(swine * (swineWeight * 0.08));
+
+    // Feedstock Water Ratios
+    const broilerDilutionL = Math.round(litterKg * 2.7); // 1:2.7
+    const swineDilutionL = Math.round(swineSlurryKg * 0.4); // 1:0.4
+    const totalDilutionL = broilerDilutionL + swineDilutionL;
+
+    document.getElementById('broiler-dilution-water').innerText = broilerDilutionL.toLocaleString() + " L / day";
+    document.getElementById('swine-dilution-water').innerText = swineDilutionL.toLocaleString() + " L / day";
+    document.getElementById('total-dilution').innerText = totalDilutionL.toLocaleString() + " L / day";
+
+    const stewardBroiler = document.getElementById('steward-broiler-teaching');
+    const stewardSwine = document.getElementById('steward-swine-teaching');
+
+    stewardBroiler.innerHTML = `📜 <strong>Steward's Teaching:</strong> ${broilers.toLocaleString()} broilers generate ~${litterKg.toLocaleString()} kg litter/day. Dilute at 1:2.7 ratio (${broilerDilutionL.toLocaleString()} L water) for 8.1% TS.`;
+    stewardSwine.innerHTML = `📜 <strong>Steward's Teaching:</strong> ${swine} swine generate ~${swineSlurryKg.toLocaleString()} kg slurry/day. Dilute at 1:0.4 ratio (${swineDilutionL.toLocaleString()} L water) for 8.0% TS.`;
+}
+
+updateTelemetry();
+</script>
+
+
+</body></html>
