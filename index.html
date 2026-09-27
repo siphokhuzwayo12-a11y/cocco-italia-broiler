@@ -23,7 +23,7 @@
 <body class="bg-slate-950 text-slate-100 min-h-screen font-sans p-4 md:p-8">
   <div class="max-w-7xl mx-auto space-y-6">
     
-    <!-- Top Bar -->
+    <!-- Top Header Bar -->
     <header class="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-slate-900 border border-slate-800 shadow-xl">
       <div class="flex items-center space-x-3">
         <div class="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
@@ -43,38 +43,49 @@
       </div>
     </header>
 
-    <!-- Core Simulator Module Panel -->
-    <main class="bg-slate-900 border border-slate-800 rounded-xl p-4 md:p-6 shadow-2xl space-y-4">
-      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-        <h2 class="text-sm font-semibold tracking-wider text-slate-300 uppercase flex items-center gap-2">
-          <i data-lucide="cpu" class="w-4 h-4 text-cyan-400"></i>
-          Live Microclimate Telemetry Transmission
-        </h2>
-        <a href="Lwandile Broiler Environmental Controller _ Artifact Zero-Mortality & Bilingual English_Italian Core.html" 
-           target="_blank" 
-           class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
-          Open Standalone Core <i data-lucide="external-link" class="w-3 h-3"></i>
+    <!-- Navigation Hub (Module Selector) -->
+    <nav class="bg-slate-900 border border-slate-800 rounded-xl p-3 shadow-lg">
+      <div class="flex flex-wrap gap-2 items-center justify-between">
+        <div class="flex flex-wrap gap-2" id="navTabs">
+          <button onclick="loadModule('scapush-precision-zero-mortality-system.html', this)" class="nav-btn px-3 py-2 text-xs font-semibold rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 flex items-center gap-1.5 transition-all">
+            <i data-lucide="cpu" class="w-4 h-4"></i> Zero-Mortality Controller
+          </button>
+          <button onclick="loadModule('broiler-pathogen-shield.html', this)" class="nav-btn px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700/50 flex items-center gap-1.5 transition-all">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> Pathogen Shield
+          </button>
+          <button onclick="loadModule('broiler-brooding-abattoir.html', this)" class="nav-btn px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700/50 flex items-center gap-1.5 transition-all">
+            <i data-lucide="factory" class="w-4 h-4"></i> Brooding Abattoir
+          </button>
+          <button onclick="loadModule('intake-digestor-feedstock-matrix.html', this)" class="nav-btn px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700/50 flex items-center gap-1.5 transition-all">
+            <i data-lucide="database" class="w-4 h-4"></i> Feedstock Digestor
+          </button>
+        </div>
+        <a id="standaloneLink" href="scapush-precision-zero-mortality-system.html" target="_blank" class="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors px-2 py-1">
+          Open Selected Standalone <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
       </div>
+    </nav>
 
-      <!-- Full Core Viewport Container -->
+    <!-- Dynamic Module Viewport -->
+    <main class="bg-slate-900 border border-slate-800 rounded-xl p-3 md:p-4 shadow-2xl">
       <div class="w-full rounded-xl overflow-hidden border border-slate-800 bg-slate-950 shadow-inner">
         <iframe 
-          src="Lwandile Broiler Environmental Controller _ Artifact Zero-Mortality & Bilingual English_Italian Core.html" 
-          class="w-full h-[900px] border-0" 
-          title="Master Dispatch Core Simulator">
+          id="portalViewport"
+          src="scapush-precision-zero-mortality-system.html" 
+          class="w-full h-[850px] border-0" 
+          title="Master Dispatch Module Viewport">
         </iframe>
       </div>
     </main>
 
-    <!-- Analytics & Voice Log Grid -->
+    <!-- Bottom Telemetry & Voice Log Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl space-y-4">
         <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
           <i data-lucide="activity" class="w-4 h-4 text-cyan-400"></i>
-          Batch Dispatch Analysis
+          Batch Dispatch Telemetry Analysis
         </h3>
-        <div class="h-48">
+        <div class="h-44">
           <canvas id="dispatchChart"></canvas>
         </div>
       </div>
@@ -82,12 +93,12 @@
       <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl space-y-3">
         <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
           <i data-lucide="terminal" class="w-4 h-4 text-cyan-400"></i>
-          Real-Time Voice Log
+          Real-Time Dispatch Voice Log
         </h3>
-        <div class="bg-slate-950 border border-slate-800/80 rounded-lg p-3 font-mono text-xs text-slate-300 h-48 overflow-y-auto space-y-2">
+        <div class="bg-slate-950 border border-slate-800/80 rounded-lg p-3 font-mono text-xs text-slate-300 h-44 overflow-y-auto space-y-2">
           <p><span class="text-cyan-400">[SYS_INIT]</span> Master Dispatch Portal initialized.</p>
-          <p><span class="text-emerald-400">[ONLINE]</span> Transmission loop synchronized with Pod Nursery Matrix.</p>
-          <p><span class="text-amber-400">[TEACHABILITY]</span> Environmental feedback clamped at Zero Mortality.</p>
+          <p><span class="text-emerald-400">[MODULE_LOAD]</span> Active Viewport synchronized with repository tree.</p>
+          <p><span class="text-amber-400">[TEACHABILITY]</span> Multi-file telemetry suite online.</p>
         </div>
       </div>
     </div>
@@ -97,13 +108,24 @@
   <script>
     lucide.createIcons();
 
+    function loadModule(filePath, btnElement) {
+      document.getElementById('portalViewport').src = filePath;
+      document.getElementById('standaloneLink').href = filePath;
+
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.className = "nav-btn px-3 py-2 text-xs font-semibold rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700/50 flex items-center gap-1.5 transition-all";
+      });
+
+      btnElement.className = "nav-btn px-3 py-2 text-xs font-semibold rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 flex items-center gap-1.5 transition-all";
+    }
+
     const ctx = document.getElementById('dispatchChart').getContext('2d');
     new Chart(ctx, {
       type: 'line',
       data: {
         labels: ['Day 1', 'Day 7', 'Day 14', 'Day 21', 'Day 28', 'Day 35'],
         datasets: [{
-          label: 'Target Temp (Â°C)',
+          label: 'Target Temp (°C)',
           data: [33.5, 30.0, 27.0, 24.0, 21.0, 20.0],
           borderColor: '#06b6d4',
           backgroundColor: 'rgba(6, 182, 212, 0.1)',
