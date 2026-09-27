@@ -1,246 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocco eThekwini - Operational Command Center</title>
-    <style>
-        :root {
-            --bg-primary: #0a0e17;
-            --bg-card: #121826;
-            --border-color: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-green: #10b981;
-            --accent-blue: #3b82f6;
-            --accent-gold: #f59e0b;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocco Dispatch Batch 01 (v1) - Master Dispatch Portal</title>
+  
+  <!-- Standalone CDNs -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gh: {
+              bg: '#0d1117',
+              panel: '#161b22',
+              border: '#30363d',
+              accent: '#58a6ff',
+              green: '#238636',
+              greenHover: '#2ea043',
+              amber: '#d29922',
+              purple: '#bc8cff',
+              italian: '#008c45',
+              italianRed: '#cd212a',
+              text: '#f0f6fc',
+              muted: '#8b949e',
+              header: '#010409'
+            }
+          }
         }
+      }
+    }
+  </script>
 
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            padding: 2rem 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            max-width: 900px;
-            width: 100%;
-            margin-bottom: 2.5rem;
-            text-align: center;
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: var(--accent-green);
-            padding: 0.4rem 1rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-green);
-            border-radius: 50%;
-            box-shadow: 0 0 8px var(--accent-green);
-        }
-
-        h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-            margin-bottom: 0.5rem;
-        }
-
-        p.subtitle {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-        }
-
-        .grid-container {
-            max-width: 900px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.25rem;
-        }
-
-        .module-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.2s ease-in-out;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .module-card:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -10px rgba(59, 130, 246, 0.3);
-        }
-
-        .module-tag {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--accent-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .module-tag.linked {
-            color: var(--accent-gold);
-        }
-
-        .module-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .module-desc {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        .launch-btn {
-            margin-top: 1.25rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent-blue);
-        }
-
-        footer {
-            margin-top: 3rem;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            text-align: center;
-        }
-    </style>
+  <style>
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #0d1117; }
+    ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #8b949e; }
+  </style>
 </head>
-<body>
+<body class="bg-gh-bg text-gh-text min-h-screen font-sans antialiased">
 
-    <header>
-        <div class="status-badge">
-            <span class="status-dot"></span> Scapush Precision Active
+  <!-- Header Banner -->
+  <header class="bg-gh-header border-b border-gh-border p-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <i data-lucide="layout-dashboard" class="w-7 h-7 text-gh-accent"></i>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+            Cocco Dispatch Batch 01 (v1)
+            <span class="text-xs bg-gh-italian text-white px-2 py-0.5 rounded-full uppercase tracking-wider font-semibold">Master Portal</span>
+          </h1>
+          <p class="text-xs text-gh-muted">Scapush Precision Telemetry & Execution Architecture</p>
         </div>
-        <h1>Cocco eThekwini Command Center</h1>
-        <p class="subtitle">Zero-Mortality Broiler Infrastructure & Control Dashboard</p>
-    </header>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gh-green/20 text-gh-green border border-gh-green/50">
+          <span class="w-2 h-2 rounded-full bg-gh-green animate-pulse"></span>
+          SYSTEM LIVE & OPERATIONAL
+        </span>
+      </div>
+    </div>
+  </header>
 
-    <main class="grid-container">
-        <!-- Module 1 -->
-        <a href="./scapush-precision-zero-mortality-system.html" class="module-card">
-            <div>
-                <div class="module-tag">Core Engine</div>
-                <div class="module-title">Zero-Mortality System</div>
-                <div class="module-desc">Scapush Precision core architecture and main operational controls.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
+  <main class="max-w-7xl mx-auto p-4 space-y-6">
+    <!-- Embedded Transmission Simulator for Teachability -->
+    <section class="bg-gh-panel border border-gh-border rounded-xl p-4 shadow-lg">
+      <div class="flex justify-between items-center mb-4">
+        <div class="flex items-center gap-2">
+          <i data-lucide="cpu" class="w-5 h-5 text-gh-accent"></i>
+          <h2 class="text-base font-bold text-white">Live Microclimate Telemetry Transmission</h2>
+        </div>
+        <a href="./Lwandile Broiler Environmental Controller _ Artifact Zero-Mortality & Bilingual English_Italian Core.html" target="_blank" class="text-xs text-gh-accent hover:underline flex items-center gap-1">
+          Open Standalone Core <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
+      </div>
 
-        <!-- Module 2 -->
-        <a href="./broiler-pathogen-shield.html" class="module-card">
-            <div>
-                <div class="module-tag linked">Linked Assets</div>
-                <div class="module-title">Pathogen Shield</div>
-                <div class="module-desc">Biosecurity perimeter defense monitoring and threat mitigation.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
-        </a>
+      <!-- Iframe linking to the Zero-Mortality Simulator Engine -->
+      <div class="w-full h-72 border border-gh-border rounded-lg overflow-hidden bg-black">
+        <iframe 
+          src="./Lwandile Broiler Environmental Controller _ Artifact Zero-Mortality & Bilingual English_Italian Core.html" 
+          class="w-full h-full border-0"
+          title="Microclimate Simulator Transmission">
+        </iframe>
+      </div>
+    </section>
 
-        <!-- Module 3 -->
-        <a href="./dino-cocco-dispatch-batch01.html" class="module-card">
-            <div>
-                <div class="module-tag linked">Linked Assets</div>
-                <div class="module-title">Dispatch Batch 01</div>
-                <div class="module-desc">Flock dispatch scheduling and batch delivery logistics tracking.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
-        </a>
+    <!-- Master Log & Dispatch Telemetry -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-gh-panel border border-gh-border rounded-xl p-5 space-y-4">
+        <h3 class="text-sm font-bold text-white flex items-center gap-2">
+          <i data-lucide="activity" class="w-4 h-4 text-gh-purple"></i> Batch Dispatch Analysis
+        </h3>
+        <canvas id="dispatchChart" class="w-full h-64"></canvas>
+      </div>
 
-        <!-- Module 4 -->
-        <a href="./modulo-auto-cover-wall-broiler-dwarf.html" class="module-card">
-            <div>
-                <div class="module-tag linked">Linked Assets</div>
-                <div class="module-title">Auto Cover Wall</div>
-                <div class="module-desc">Automated dwarf wall environmental barrier controllers.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
-        </a>
+      <div class="bg-gh-panel border border-gh-border rounded-xl p-5 space-y-4">
+        <h3 class="text-sm font-bold text-white flex items-center gap-2">
+          <i data-lucide="terminal" class="w-4 h-4 text-gh-amber"></i> Real-Time Voice Log
+        </h3>
+        <div class="font-mono text-xs text-gh-muted space-y-2 bg-gh-bg p-3 rounded-lg border border-gh-border h-64 overflow-y-auto">
+          <p><span class="text-gh-accent">[SYS_INIT]</span> Master Dispatch Portal initialized.</p>
+          <p><span class="text-gh-green">[ONLINE]</span> Transmission loop synchronized with Pod Nursery Matrix.</p>
+          <p><span class="text-gh-amber">[TEACHABILITY]</span> Environmental feedback clamped at Zero Mortality.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Module 5 -->
-        <a href="./broiler-brooding-abattoir.html" class="module-card">
-            <div>
-                <div class="module-tag">Standalone</div>
-                <div class="module-title">Brooding & Abattoir</div>
-                <div class="module-desc">Brooding stage management and processing line oversight.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
-        </a>
+  <script>
+    lucide.createIcons();
 
-        <!-- Module 6 -->
-        <a href="./broiler-microclimate-simulator.html" class="module-card">
-            <div>
-                <div class="module-tag">Standalone</div>
-                <div class="module-title">Microclimate Simulator</div>
-                <div class="module-desc">Airflow, humidity, and temperature modeling environment.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
-        </a>
-
-        <!-- Module 7 -->
-        <a href="./broiler-thermal-matrix.html" class="module-card">
-            <div>
-                <div class="module-tag">Standalone</div>
-                <div class="module-title">Thermal Matrix</div>
-                <div class="module-desc">Real-time heat distribution mapping and ventilation monitoring.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
-        </a>
-
-        <!-- Module 8 -->
-        <a href="./intake-digestor-feedstock-matrix.html" class="module-card">
-            <div>
-                <div class="module-tag">Standalone</div>
-                <div class="module-title">Feedstock Matrix</div>
-                <div class="module-desc">Nutritional intake optimization and digestor feed analytics.</div>
-            </div>
-            <div class="launch-btn">Launch Module &rarr;</div>
-        </a>
-    </main>
-
-    <footer>
-        <p>Cocco eThekwini &copy; 2026 | Standardized Deployment Environment</p>
-    </footer>
-
+    // Initialize Chart.js
+    const ctx = document.getElementById('dispatchChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+        datasets: [{
+          label: 'Target Temp (°C)',
+          data: [33.5, 33.5, 33.0, 32.5, 33.0, 33.5],
+          borderColor: '#58a6ff',
+          backgroundColor: 'rgba(88, 166, 255, 0.1)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { labels: { color: '#f0f6fc' } } },
+        scales: {
+          x: { ticks: { color: '#8b949e' }, grid: { color: '#30363d' } },
+          y: { ticks: { color: '#8b949e' }, grid: { color: '#30363d' } }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
